@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "uDq51Mm0xWd5DLczilZ2DY0Epxl7tg+0I1VD12kI1jQ=",
+  "Source": "PassGuard.Api",
+  "BasePath": "_content/PassGuard.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

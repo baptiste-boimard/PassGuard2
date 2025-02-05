@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Api", "PassGuard.Api\PassGuard.Api.csproj", "{D16FA8F8-1B8A-4273-B323-F58EDB296A76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Web", "PassGuard.Web\PassGuard.Web\PassGuard.Web.csproj", "{C838E60A-C0F5-4D7A-A37E-2751B69E0223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Web.Client", "PassGuard.Web\PassGuard.Web.Client\PassGuard.Web.Client.csproj", "{313A2153-EBB4-4696-B2A9-0DF65300C9A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Shared", "PassGuard.Shared\PassGuard.Shared.csproj", "{C315A121-5988-4703-B478-2B4491C8FA5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D16FA8F8-1B8A-4273-B323-F58EDB296A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16FA8F8-1B8A-4273-B323-F58EDB296A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16FA8F8-1B8A-4273-B323-F58EDB296A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16FA8F8-1B8A-4273-B323-F58EDB296A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C838E60A-C0F5-4D7A-A37E-2751B69E0223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C838E60A-C0F5-4D7A-A37E-2751B69E0223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C838E60A-C0F5-4D7A-A37E-2751B69E0223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C838E60A-C0F5-4D7A-A37E-2751B69E0223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313A2153-EBB4-4696-B2A9-0DF65300C9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313A2153-EBB4-4696-B2A9-0DF65300C9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313A2153-EBB4-4696-B2A9-0DF65300C9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313A2153-EBB4-4696-B2A9-0DF65300C9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C315A121-5988-4703-B478-2B4491C8FA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C315A121-5988-4703-B478-2B4491C8FA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C315A121-5988-4703-B478-2B4491C8FA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C315A121-5988-4703-B478-2B4491C8FA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

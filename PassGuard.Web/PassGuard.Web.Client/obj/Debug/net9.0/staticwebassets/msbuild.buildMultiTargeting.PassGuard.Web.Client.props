@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PassGuard.Web.Client.props" />
+</Project>

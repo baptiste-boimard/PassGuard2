@@ -1,0 +1,147 @@
+﻿@using System.Net
+@using System.Text.RegularExpressions
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
+<MudGrid Class="d-flex justify-start align-up">
+    <MudItem xs="12" 
+             sm="10" 
+             Class="d-flex justify-start" >
+        <MudPaper Class="pa-4" Style="width: 400px;height: auto; position: relative">
+            @if (errorConflict)
+            {
+                <MudAlert Severity="Severity.Error"
+                          ShowCloseIcon="true"
+                          CloseIconClicked="(() => CloseErrorConflict())"
+                          Style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
+                            background-color: rgba(255, 255, 255, 0.9); z-index: 10; padding: 16px; border-radius: 8px; 
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            max-width: 400px; width: 100%">Ce nom d'utilisateur n'est pas disponible</MudAlert>
+            }
+            @if (registredOk)
+            {
+                <MudAlert Severity="Severity.Success"
+                          ShowCloseIcon="true"
+                          CloseIconClicked="(() => CloseRegistredOK())"
+                          Style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
+                            background-color: rgba(255, 255, 255, 0.9); z-index: 10; padding: 16px; border-radius: 8px; 
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            max-width: 400px; width: 100%">Vous êtes inscrit avec succés !! Vous pouvez vous connecter</MudAlert>
+            }
+            <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                <h3>S'incrire</h3>
+                <MudTextField T="string"
+                              Label="Nom d'utilisateur"
+                              Required="true"
+                              RequiredError="Le nom d'utilisateur est nécessaire !"
+                              @bind-Value="@registerAccountForm.Username"/>
+                <MudTextField T="string"
+                              Label="Mot de passe"
+                              HelperText="Choisissez un mot de passe robuste"
+                              @ref="pwField1"
+                              InputType="InputType.Password"
+                              Validation="@(new Func<string, IEnumerable<string>>(PasswordStrength))"
+                              Required="true"
+                              RequiredError="Le mot de passe est nécessaire !"
+                              @bind-Value="@registerAccountForm.Password"/>
+                <MudTextField T="string"
+                              Label="Password" HelperText="Répétez le mot de passe" InputType="InputType.Password"
+                              Validation="@(new Func<string, string>(PasswordMatch))"/>
+                <div class="d-flex align-center justify-space-between w-100">
+                    <MudCheckBox T="bool"
+                                 Required="true"
+                                 RequiredError="Vous devez être d'accord"
+                                 Label="Je suis d'accord !"
+                                 Class=""/>
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               Disabled="@(!success)"
+                               OnClick="submitForm">S'incrire</MudButton>
+                </div>
+            </MudForm>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+    // COMPONENTS
+    bool success;
+    string[] errors = { };
+    MudTextField<string> pwField1;
+    MudForm form;
+    // VALUES
+    public class RegisterAccountForm()
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+    
+    RegisterAccountForm registerAccountForm = new RegisterAccountForm();
+    private bool errorConflict = false;
+    private bool registredOk = false;
+    
+    // // Création du Client à l'initialisation du composant
+    // protected override void OnInitialized()
+    // {
+    //     Client = HttpClientFactory.CreateClient("ApiClient");
+    // }
+    
+    // COMPONENTS
+    private IEnumerable<string> PasswordStrength(string pw)
+    {
+        if (string.IsNullOrWhiteSpace(pw))
+        {
+            yield return "Password is required!";
+            yield break;
+        }
+        if (pw.Length < 8)
+            yield return "Le mot de passe doit contenir au moins 8 caractères";
+        if (!Regex.IsMatch(pw, @"[A-Z]"))
+            yield return "Le mot de passe doit contenir au moins 1 majuscule";
+        if (!Regex.IsMatch(pw, @"[a-z]"))
+            yield return "Le mot de passe doit contenir au moins 1 minuscule";
+        if (!Regex.IsMatch(pw, @"[0-9]"))
+            yield return "Le mot de passe doit contenir au moins 1 chiffre";
+    }
+
+    private string PasswordMatch(string arg)
+    {
+        if (pwField1.Value != arg)
+            return "Les 2 mots de passe ne correspondent pas";
+        return null;
+    }
+
+    // ============ ACTION ============
+    private async Task submitForm()
+    {
+        var content = JsonContent.Create(registerAccountForm);
+
+        var response = await HttpClient.PostAsync("https://localhost:7012/api/auth/register", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            registredOk = true;
+            StateHasChanged();
+
+        }
+
+        if (response.StatusCode == HttpStatusCode.Conflict)
+        {
+            errorConflict = true;
+            StateHasChanged();
+        }
+    }
+
+    private void CloseErrorConflict()
+    {
+        errorConflict = false;
+        StateHasChanged();
+    }
+    private void CloseRegistredOK()
+    {
+        registredOk = false;
+        StateHasChanged();
+    }
+}
