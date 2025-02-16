@@ -88,6 +88,30 @@ public class DataRepository
 
         return passwordArray;
     }
-    
-    
+
+    public async Task<ObjectPassword> PatchPassword(Guid id, ObjectPassword objectPassword)
+    {
+        var modifiedPassword = await _postgresDbContext.ObjectPasswords.FindAsync(id);
+
+        if (modifiedPassword == null) return null;
+
+        _postgresDbContext.Entry(modifiedPassword).CurrentValues.SetValues(objectPassword);
+        
+        await _postgresDbContext.SaveChangesAsync();
+
+        return modifiedPassword;
+    }
+
+    public async Task<ObjectPassword> DeletePassword(Guid id)
+    {
+        var deletedPassword =
+            await _postgresDbContext.ObjectPasswords.FindAsync(id);
+
+        if (deletedPassword == null) return null;
+        
+        _postgresDbContext.ObjectPasswords.Remove( deletedPassword);
+        await _postgresDbContext.SaveChangesAsync();
+
+        return deletedPassword;
+    }
 }

@@ -22,29 +22,30 @@
     <RowTemplate>
         @if (editingItem == @context)
         {
-            <MudTd DataLabel="Site">
+            <MudTd DataLabel="Site" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Site" />
             </MudTd>
-            <MudTd DataLabel="Nom d'utilisateur">
+            <MudTd DataLabel="Nom d'utilisateur" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Username" />
             </MudTd>
-            <MudTd DataLabel="Mot de passe">
+            <MudTd DataLabel="Mot de passe" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Password" />
             </MudTd>
-            <MudTd DataLabel="Catégorie">
+            <MudTd DataLabel="Catégorie" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Category" />
             </MudTd>
             <MudTd DataLabel="Actions">
-                <MudButton Color="Color.Primary" OnClick="@SaveChanges">Enregistrer</MudButton>
+                <MudButton Color="Color.Tertiary" OnClick="@SaveChanges">Enregistrer</MudButton>
                 <MudButton Color="Color.Secondary" OnClick="@CancelEditing">Annuler</MudButton>
+                <MudButton Color="Color.Primary" OnClick="@DeleteEditing">Effacer</MudButton>
             </MudTd>
         }
         else
         {
-            <MudTd DataLabel="Site">@context.Site</MudTd>
-            <MudTd DataLabel="Nom d'utilisateur">@context.Username</MudTd>
-            <MudTd DataLabel="Mot de passe">@context.Password</MudTd>
-            <MudTd DataLabel="Catégorie">@context.Category</MudTd>
+            <MudTd DataLabel="Site" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Site</MudTd>
+            <MudTd DataLabel="Nom d'utilisateur" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Username</MudTd>
+            <MudTd DataLabel="Mot de passe" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Password</MudTd>
+            <MudTd DataLabel="Catégorie" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Category</MudTd>
         }
     </RowTemplate>
 </MudTable>
@@ -81,10 +82,9 @@
         editingItem = item;
     }
     
-    private void SaveChanges()
+    private async void SaveChanges()
     {
-        // Ici, vous pouvez appeler une méthode pour enregistrer les modifications en API si besoin.
-        // Par exemple: await PasswordState.UpdatePasswordAsync(editingItem);
+        await PasswordState.UpdatePasword(editingItem);
         
         editingItem = null;
         StateHasChanged();
@@ -92,6 +92,13 @@
     
     private void CancelEditing()
     {
+        editingItem = null;
+        StateHasChanged();
+    }
+
+    private async void DeleteEditing()
+    {
+        await PasswordState.DeletePassword(editingItem);
         editingItem = null;
         StateHasChanged();
     }

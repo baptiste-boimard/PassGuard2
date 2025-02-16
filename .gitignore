@@ -1,0 +1,36 @@
+## Répertoire de build
+bin/
+obj/
+
+## Fichiers et dossiers générés par Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Répertoires de configuration pour Visual Studio Code
+.vscode/
+
+## Répertoire des packages NuGet
+packages/
+.nuget/
+
+## Fichiers générés par les outils de build
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.xml
+
+## Fichiers spécifiques à Rider
+.idea/
+
+## Fichiers système
+.DS_Store
+Thumbs.db
+
+.idea
+.run
+

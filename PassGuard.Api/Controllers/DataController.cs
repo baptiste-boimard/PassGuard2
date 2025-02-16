@@ -45,4 +45,26 @@ public class DataController : ControllerBase
         
         return Ok(passwordArray);
     }
+
+    [HttpPatch]
+    [Route("patchpassword")]
+    public async Task<IActionResult> PatchPassword([FromBody] ObjectPassword objectPassword)
+    {
+        var modifiedPassword = await _dataRepository.PatchPassword(objectPassword.Id, objectPassword);
+
+        if (modifiedPassword == null) return NotFound();
+
+        return Ok(modifiedPassword);
+    }
+
+    [HttpDelete]
+    [Route("deletepassword/{id}")]
+    public async Task<IActionResult> DeletePassword([FromRoute] string id)
+    {
+        var deletedPassword = await _dataRepository.DeletePassword(Guid.Parse(id));
+
+        if (deletedPassword == null) return NotFound();
+
+        return Ok(deletedPassword);
+    }
 }

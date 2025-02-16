@@ -46,4 +46,29 @@ public class PasswordState
         OnChange?.Invoke();
         return PasswordArray;
     }
+
+    public async Task<ObjectPassword[]> UpdatePasword(ObjectPassword item)
+    {
+        var content = JsonContent.Create(item);
+
+        var response = await _httpClient.PatchAsync(
+            "https://localhost:7012/api/password/patchpassword", content);
+        
+        if (response.IsSuccessStatusCode)
+        {
+            await GetPasswordArray();
+        }
+
+        return null;
+    }
+
+    public async Task<ObjectPassword[]> DeletePassword(ObjectPassword item)
+    {
+        var response = await _httpClient.DeleteAsync(
+            $"https://localhost:7012/api/password/deletepassword/{item.Id.ToString()}");
+
+        if (response.IsSuccessStatusCode) return await GetPasswordArray();
+
+        return null;
+    }
 }
