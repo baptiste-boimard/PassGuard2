@@ -1,49 +1,42 @@
 ﻿@using System.Net
-@using Microsoft.AspNetCore.Components.Authorization
-@* @using PassGuard.Api.Service *@
-@using PassGuard.Shared.Models
-@using PassGuard.Web.Client.Service
+@using Blazored.LocalStorage
 @inject HttpClient HttpClient
 @inject NavigationManager Navigation
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
-@* @inject AuthenticationStateProvider authenticationStateProvider *@
-@* @inject AuthStateProvider AuthStateProvider *@
-
-
+@inject ILocalStorageService LocalStorage
 
 
 <MudGrid Class="d-flex justify-end align-up">
     <MudItem xs="12" sm="10" Class="d-flex justify-end">
         <MudPaper Class="pa-4" Style="width: 400px;height: auto;position: relative">
-            @if (errorUnauthorized)
+            @if (_errorUnauthorized)
             {
                 <MudAlert Severity="Severity.Error"
                           ShowCloseIcon="true"
                           CloseIconClicked="(() => CloseErrorUnauthorized())"
                           Style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
                             background-color: rgba(255, 255, 255, 0.9); z-index: 10; padding: 16px; border-radius: 8px; 
-                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                             max-width: 400px; width: 100%">Le nom d'utilisateur et/ou le mot de passe sont incorrects"</MudAlert>
             }
-            <MudForm @ref="form">
+            <MudForm @ref="_form">
                 <h3>Se Connecter</h3>
                 <MudTextField T="string"
                               Label="Nom d'utilisateur"
                               Required="true"
                               RequiredError="Le nom d'utilisateur est nécessaire !"
-                              @bind-Value="@loginAccountForm.Username"/>
+                              @bind-Value="@_loginAccountForm.Username"/>
                 <MudTextField T="string"
                               Label="Mot de passe"
                               HelperText="Entrer votre mot de passe"
                               InputType="InputType.Password"
                               Required="true"
                               RequiredError="Le mot de passe est nécessaire !"
-                              @bind-Value="@loginAccountForm.Password"/>
+                              @bind-Value="@_loginAccountForm.Password"/>
                 <div class="d-flex align-center justify-space-between">
                     <MudButton Variant="Variant.Filled"
                                Color="Color.Primary"
                                Class="ml-auto mt-12"
-                               OnClick="submitForm">Se Connecter</MudButton>
+                               OnClick="SubmitForm">Se Connecter</MudButton>
                 </div>
             </MudForm>
         </MudPaper>
@@ -52,76 +45,42 @@
 
 
 @code {
-    
-    // COMPONENTS
-    MudForm form;
-    // VALUES
-    public class LoginAccountForm()
+    MudForm? _form;
+    private class LoginAccountForm
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string? Username { get; set; }
+        public string? Password { get; set; }
     }
 
-    LoginAccountForm loginAccountForm = new LoginAccountForm();
-    private bool errorUnauthorized = false;
-
-    // [Inject]
-    // public AuthenticationStateProvider AuthenticationStateProvider { get;set; }
+    LoginAccountForm _loginAccountForm = new LoginAccountForm();
+    private bool _errorUnauthorized = false;
     
-    // [Inject]
-    // public static IHttpClientFactory HttpClientFactory { get; set; }
-    //
-    // HttpClient httpClient = HttpClientFactory.CreateClient("AuthorizedClient");
-
-    
-    
-    // ACTION
-    private async Task submitForm()
+    private async Task SubmitForm()
     {
-        var content = JsonContent.Create(loginAccountForm);
+        var content = JsonContent.Create(_loginAccountForm);
 
         var response = await HttpClient.PostAsync("https://localhost:7012/api/auth/login", content);
-        // var response = await httpClient.PostAsync("https://localhost:7012/api/auth/login", content);
-
         
-        // var user = await response.Content.ReadFromJsonAsync<AccountDTO>();
-        JwtToken token = await response.Content.ReadFromJsonAsync<JwtToken>();
-
+        string token = await response.Content.ReadAsStringAsync();
         
         if (response.IsSuccessStatusCode)
         {
-            await localStorage.SetItemAsync("token", token);
-            // try
-            // {
-            //     // ((AuthStateProvider)AuthenticationStateProvider).MarkUserAsAuthenticated(token);
-            //     // await ((AuthStateProvider)AuthStateProvider.LoadUserFromStorage();
-            //     
-            //     
-            //         await AuthStateProvider.LoadUserFromStorage();
-            //     
-            //
-            // }
-            // catch (Exception e)
-            // {
-            //     Console.WriteLine(e);
-            //     throw;
-            // }
+            await LocalStorage.SetItemAsync("token", token);
 
             Navigation.NavigateTo("/pass");
-            // StateHasChanged();       
+            StateHasChanged();       
         }
 
         if (response.StatusCode == HttpStatusCode.Unauthorized)
         {
-            errorUnauthorized = true;
+            _errorUnauthorized = true;
             StateHasChanged();
         }
     }
 
     private void CloseErrorUnauthorized()
     {
-        errorUnauthorized = false;
+        _errorUnauthorized = false;
         StateHasChanged();
     }
-
 }

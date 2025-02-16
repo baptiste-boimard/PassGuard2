@@ -11,6 +11,7 @@ public class PostgresDbContext : DbContext
     }
     
     public DbSet<Account> Accounts { get; set; }
+    public DbSet<ObjectPassword> ObjectPasswords { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,6 +22,17 @@ public class PostgresDbContext : DbContext
             entity.HasKey(a => a.Id);
             entity.Property(a => a.Username).IsRequired();
             entity.Property(a => a.Password).IsRequired();
+            entity.Property(a => a.Salt);
+            entity.Property(a => a.CreatedAt);
+        });
+
+        modelBuilder.Entity<ObjectPassword>(entity =>
+        {
+            entity.HasKey(a => a.Id);
+            entity.Property(a => a.Site).IsRequired();
+            entity.Property(a => a.Username).IsRequired();
+            entity.Property(a => a.Password).IsRequired();
+            entity.Property(a => a.Category).IsRequired();
             entity.Property(a => a.Salt);
             entity.Property(a => a.CreatedAt);
         });

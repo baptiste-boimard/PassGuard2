@@ -1,69 +1,49 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNetCore.Authorization
-@using PassGuard.Web.Client.Components.Data
-@using Microsoft.AspNetCore.Components.Authorization
-@using PassGuard.Shared.Models
-@using PassGuard.Web.Client.Service
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
-@* @inject AuthStateProvider AuthStateProvider *@
+﻿@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject NavigationManager Navigation
-@inject IJSRuntime JS
 
-
-
-
-@page "/pass"
+@* @page "/pass" *@
+@page "/"
+@using PassGuard.Web.Client.Components.Data
 @rendermode InteractiveWebAssembly
-@* @attribute [Authorize] *@
 
+<PageTitle>Pass</PageTitle>
 
+<h1 class="text-muted">Render @(OperatingSystem.IsBrowser() ? "Wasm" : "Server")</h1>
 
-@* <AuthorizeView> *@
-@*     <Authorized> *@
-        <PageTitle>Pass</PageTitle>
-
-        <h1 class="text-muted">Render @(OperatingSystem.IsBrowser() ? "Wasm" : "Server")</h1>
-        @if(token != null)
-        {
-            <p>@token.Token</p>
-        }
-        else
-        {
-            <p>Token is null</p>
-        }
-        @* <ShowData /> *@
-        @* <EnterData /> *@
-    @* </Authorized> *@
-    @* <NotAuthorized> *@
-    @*     <p>Non loggé</p> *@
-@*     </NotAuthorized> *@
-@* </AuthorizeView> *@
-
+@* @if (_isLoading) { *@
+@*     <MudProgressCircular Color="Color.Info" Style="height:70px;width:70px;" Indeterminate="true" /> *@
+@* } *@
+@* else *@
+@* { *@
+    <EnterData />
+    <ShowData />
+@* } *@
 
 @code {
-    JwtToken token;
-    
+    string? _token;
+    private bool _isLoading;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            token = await localStorage.GetItemAsync<JwtToken>("token");
-            // await AuthStateProvider.LoadUserFromStorage();
-            
-            // var authStateProvider = AuthStateProvider as AuthStateProvider;
-            //
-            // if (authStateProvider != null)
-            // {
-            //     await authStateProvider.LoadUserFromStorage();
-            // }
-            
-            StateHasChanged(); // ✅ Forcer un re-render après mise à jour
+            _token = await LocalStorage.GetItemAsync<string>("token");
+
+            if (_token != null)
+            {
+                _isLoading = false;
+                StateHasChanged();
+            }
+            else
+            {
+                Navigation.NavigateTo("/");
+            }
         }
-        // else
-        // {
-        //     Navigation.NavigateTo("/");
-        // }
     }
     
+    protected override Task OnInitializedAsync()
+    {
+        _isLoading = true;
+        return Task.CompletedTask;
     }
 }

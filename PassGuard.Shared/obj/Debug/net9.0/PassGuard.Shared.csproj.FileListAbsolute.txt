@@ -1,12 +1,13 @@
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\bin\Debug\net9.0\PassGuard.Shared.deps.json
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\bin\Debug\net9.0\PassGuard.Shared.dll
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\bin\Debug\net9.0\PassGuard.Shared.pdb
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.csproj.AssemblyReference.cache
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.AssemblyInfoInputs.cache
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.AssemblyInfo.cs
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.csproj.CoreCompileInputs.cache
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.sourcelink.json
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.dll
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\refint\PassGuard.Shared.dll
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.pdb
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\ref\PassGuard.Shared.dll
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Shared\obj\Debug\net9.0\PassGuard.Shared.csproj.AssemblyReference.cache

@@ -1,66 +1,98 @@
 ﻿@using PassGuard.Shared.Models
+@using PassGuard.Shared.State
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject HttpClient HttpClient
+@inject PasswordState PasswordState
 
-<MudSimpleTable Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Style="overflow-x: auto;">
-    <thead>
-    <tr>
-        @foreach (var h in headings)
+
+@rendermode InteractiveWebAssembly
+
+<MudTable Items="@_passwordArray" Dense=true Hover=true Bordered=true Striped=true>
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Liste de vos mots de passe</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Site</MudTh>
+        <MudTh>Nom d'utilisateur</MudTh>
+        <MudTh>Mot de passe</MudTh>
+        <MudTh>Catégorie</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        @if (editingItem == @context)
         {
-            <th>@h</th>
+            <MudTd DataLabel="Site">
+                <MudTextField T="string" @bind-Value="editingItem.Site" />
+            </MudTd>
+            <MudTd DataLabel="Nom d'utilisateur">
+                <MudTextField T="string" @bind-Value="editingItem.Username" />
+            </MudTd>
+            <MudTd DataLabel="Mot de passe">
+                <MudTextField T="string" @bind-Value="editingItem.Password" />
+            </MudTd>
+            <MudTd DataLabel="Catégorie">
+                <MudTextField T="string" @bind-Value="editingItem.Category" />
+            </MudTd>
+            <MudTd DataLabel="Actions">
+                <MudButton Color="Color.Primary" OnClick="@SaveChanges">Enregistrer</MudButton>
+                <MudButton Color="Color.Secondary" OnClick="@CancelEditing">Annuler</MudButton>
+            </MudTd>
         }
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var row in rows)
-    {
-        <tr>
-            @foreach (var x in row.Split())
-            {
-                <td>@x</td>
-            }
-        </tr>
-    }
-    </tbody>
-</MudSimpleTable>
-@if (token != null)
-{
-    <p>@token.Token</p>
-}
-<MudToolBar>
-    <MudSwitch @bind-Value="hover" Color="Color.Primary">Hover</MudSwitch>
-    <MudSwitch @bind-Value="dense" Color="Color.Secondary">Dense</MudSwitch>
-    <MudSwitch @bind-Value="striped" Color="Color.Tertiary">Striped</MudSwitch>
-    <MudSwitch @bind-Value="bordered" Color="Color.Warning">Bordered</MudSwitch>
-</MudToolBar>
-
+        else
+        {
+            <MudTd DataLabel="Site">@context.Site</MudTd>
+            <MudTd DataLabel="Nom d'utilisateur">@context.Username</MudTd>
+            <MudTd DataLabel="Mot de passe">@context.Password</MudTd>
+            <MudTd DataLabel="Catégorie">@context.Category</MudTd>
+        }
+    </RowTemplate>
+</MudTable>
 
 @code {
+    private ObjectPassword[]? _passwordArray;
+    private string searchString1 = "";
+    private ObjectPassword? editingItem;
     
-    // protected override async Task OnAfterRenderAsync(bool firstRender)
-    // {
-    //     if (firstRender)
-    //     {
-    //         // Ici, le JSInterop est possible car le composant est déjà rendu côté client
-    //         token = await localStorage.GetItemAsync<JwtToken>("token");
-    //         // Forcer le re-rendu pour afficher les données récupérées
-    //         StateHasChanged();
-    //     }
-    // }
+    protected async override Task OnInitializedAsync()
+    {
+        PasswordState.OnChange += PasswordStateChanged;
 
-    private JwtToken token;
+        _passwordArray = await PasswordState.GetPasswordArray();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _passwordArray = await PasswordState.GetPasswordArray();
+            StateHasChanged();
+        }
+    }
     
-    private bool dense = false;
-    private bool hover = true;
-    private bool striped = false;
-    private bool bordered = false;
+    private void PasswordStateChanged()
+    {
+        _passwordArray = PasswordState.PasswordArray;
+        InvokeAsync(StateHasChanged);
+    }
 
-    string[] headings = { "ID", "Name", "Email", "Gender", "IP Address" };
-    string[] rows = {
-        @"1 Krishna kpartner0@usatoday.com Male 28.25.250.202",
-        @"2 Webb wstitle1@ning.com Male 237.168.134.114",
-        @"3 Nathanil nneal2@cyberchimps.com Male 92.6.0.175",
-        @"4 Adara alockwood3@patch.com Female 182.174.217.152",
-        @"5 Cecilius cchaplin4@shinystat.com Male 195.124.144.18",
-        @"6 Cicely cemerine9@soup.io Female 138.94.191.43",
-    };
+    private void OnRowDoubleClick(ObjectPassword item)
+    {
+        editingItem = item;
+    }
+    
+    private void SaveChanges()
+    {
+        // Ici, vous pouvez appeler une méthode pour enregistrer les modifications en API si besoin.
+        // Par exemple: await PasswordState.UpdatePasswordAsync(editingItem);
+        
+        editingItem = null;
+        StateHasChanged();
+    }
+    
+    private void CancelEditing()
+    {
+        editingItem = null;
+        StateHasChanged();
+    }
 }

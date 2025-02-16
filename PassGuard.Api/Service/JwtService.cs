@@ -1,5 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 using PassGuard.Shared.DTO;
 using PassGuard.Shared.Models;
 using static PassGuard.Api.Service.JwtKey;
@@ -8,7 +10,7 @@ namespace PassGuard.Api.Service;
 
 public class JwtService
 {
-    public static  JwtToken JwtCreateToken(AccountDTO account)
+    public static  string JwtCreateToken(AccountDTO account)
     {
         // Récupération des keys pour le jwt
         var jwtKey = LoadJwtKey();
@@ -30,14 +32,12 @@ public class JwtService
             issuer: jwtKey.issuer,
             audience: jwtKey.audience,
             claims: claims,
-            expires: DateTime.Now.AddMinutes(60)
+            expires: DateTime.Now.AddMinutes(60),
+            signingCredentials: new SigningCredentials(
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey.jwtSecret)),
+                SecurityAlgorithms.HmacSha256)
         );
-
-        var tokenString = new JwtToken
-        {
-            Token = new JwtSecurityTokenHandler().WriteToken(token)
-        };
-
-        return tokenString;
+        
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

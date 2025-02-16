@@ -2,7 +2,6 @@
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using PassGuard.Api.Database;
-using PassGuard.Api.Service;
 using PassGuard.Shared.DTO;
 using PassGuard.Shared.Models;
 using static PassGuard.Api.Service.PepperKey;
@@ -57,7 +56,7 @@ public class AuthRepository
         return newAccountDTO;
     }
 
-    public async Task<Account> VerifyExistingAccount(RegisterAccountForm registerAccountForm)
+    public async Task<Account?> VerifyExistingAccount(RegisterAccountForm registerAccountForm)
     {
         // Recherche si un compte avec le même Username existe déjà
         var existingAccount = await _postgresDbContext.Accounts

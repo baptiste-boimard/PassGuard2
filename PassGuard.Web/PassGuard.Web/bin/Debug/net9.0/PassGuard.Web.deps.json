@@ -9,7 +9,6 @@
       "PassGuard.Web/1.0.0": {
         "dependencies": {
           "Blazored.LocalStorage": "4.5.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.1",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "9.0.0",
           "MudBlazor": "8.0.0-rc.2",
           "PassGuard.Web.Client": "1.0.0"
@@ -29,45 +28,28 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.1": {
+      "Microsoft.AspNetCore.Authorization/9.0.0": {
         "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "9.0.1.0",
-            "fileVersion": "9.0.124.61009"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Authorization/9.0.1": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "9.0.1",
+          "Microsoft.AspNetCore.Metadata": "9.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
           "Microsoft.Extensions.Options": "9.0.1"
         }
       },
-      "Microsoft.AspNetCore.Components/9.0.1": {
+      "Microsoft.AspNetCore.Components/9.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "9.0.1",
-          "Microsoft.AspNetCore.Components.Analyzers": "9.0.1"
+          "Microsoft.AspNetCore.Authorization": "9.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0"
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/9.0.1": {},
-      "Microsoft.AspNetCore.Components.Authorization/9.0.1": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "9.0.1",
-          "Microsoft.AspNetCore.Components": "9.0.1"
-        }
-      },
+      "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {},
       "Microsoft.AspNetCore.Components.Forms/9.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "9.0.1"
+          "Microsoft.AspNetCore.Components": "9.0.0"
         }
       },
       "Microsoft.AspNetCore.Components.Web/9.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "9.0.1",
+          "Microsoft.AspNetCore.Components": "9.0.0",
           "Microsoft.AspNetCore.Components.Forms": "9.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.1",
           "Microsoft.Extensions.Primitives": "9.0.1",
@@ -97,7 +79,44 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/9.0.1": {},
+      "Microsoft.AspNetCore.Metadata/9.0.0": {},
+      "Microsoft.EntityFrameworkCore/9.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "9.0.0",
+          "Microsoft.EntityFrameworkCore.Analyzers": "9.0.0",
+          "Microsoft.Extensions.Caching.Memory": "9.0.0",
+          "Microsoft.Extensions.Logging": "9.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52902"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/9.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52902"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/9.0.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.1"
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Options": "9.0.1",
+          "Microsoft.Extensions.Primitives": "9.0.1"
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
@@ -240,29 +259,6 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Protocols/8.0.1": {
-        "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.3.1"
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.IdentityModel.Protocols.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.50722"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1": {
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "8.0.1",
-          "System.IdentityModel.Tokens.Jwt": "8.3.1"
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.50722"
-          }
-        }
-      },
       "Microsoft.IdentityModel.Tokens/8.3.1": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
@@ -289,7 +285,7 @@
       },
       "MudBlazor/8.0.0-rc.2": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "9.0.1",
+          "Microsoft.AspNetCore.Components": "9.0.0",
           "Microsoft.AspNetCore.Components.Web": "9.0.0",
           "Microsoft.Extensions.Localization": "9.0.0"
         },
@@ -315,7 +311,6 @@
       "PassGuard.Shared/1.0.0": {
         "dependencies": {
           "Blazored.LocalStorage": "4.5.0",
-          "Microsoft.AspNetCore.Components.Authorization": "9.0.1",
           "System.IdentityModel.Tokens.Jwt": "8.3.1"
         },
         "runtime": {
@@ -329,6 +324,7 @@
         "dependencies": {
           "Blazored.LocalStorage": "4.5.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.Extensions.Http": "9.0.1",
           "MudBlazor": "8.0.0-rc.2",
           "PassGuard.Shared": "1.0.0"
@@ -355,40 +351,26 @@
       "path": "blazored.localstorage/4.5.0",
       "hashPath": "blazored.localstorage.4.5.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.1": {
+    "Microsoft.AspNetCore.Authorization/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-R/ZG9llsAOn/E8WOtg+PyLCB599lxzaIGy/NbwV1xG+smkyBF4w5/AJXNDq6tVw7/qbqvd+4xLAdWQiiVj1DXw==",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.1",
-      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.9.0.1.nupkg.sha512"
+      "sha512": "sha512-qDJlBC5pUQ/3o6/C6Vuo9CGKtV5TAe5AdKeHvDR2bgmw8vwPxsAy3KG5eU0i1C+iAUNbmq+iDTbiKt16f9pRiA==",
+      "path": "microsoft.aspnetcore.authorization/9.0.0",
+      "hashPath": "microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authorization/9.0.1": {
+    "Microsoft.AspNetCore.Components/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WgLlLBlMczb2+QLNG6sM95OUZ0EBztz60k/N75tjIgpyu0SdpIfYytAmX/7JJAjRTZF0c/CrWaQV+SH9FuGsrA==",
-      "path": "microsoft.aspnetcore.authorization/9.0.1",
-      "hashPath": "microsoft.aspnetcore.authorization.9.0.1.nupkg.sha512"
+      "sha512": "sha512-xKzY0LRqWrwuPVzKIF9k1kC21NrLmIE2qPhhKlInEAdYqNe8qcMoPWZy7fo1uScHkz5g73nTqDDra3+aAV7mTQ==",
+      "path": "microsoft.aspnetcore.components/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.9.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components/9.0.1": {
+    "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6pwfbQKNtvPkbF4tCGiAKGyt6BVpu58xAXz7u2YXcUKTNmNxrymbG1mEyMc0EPzVdnquDDqTyfXM3mC1EJycxQ==",
-      "path": "microsoft.aspnetcore.components/9.0.1",
-      "hashPath": "microsoft.aspnetcore.components.9.0.1.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components.Analyzers/9.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-I8Rs4LXT5UQxM5Nin2+Oj8aSY2heszSZ3EyTLgt3mxmfiRPrVO7D8NNSsf1voI2Gb0qFJceof/J5c9E+nfNuHw==",
-      "path": "microsoft.aspnetcore.components.analyzers/9.0.1",
-      "hashPath": "microsoft.aspnetcore.components.analyzers.9.0.1.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components.Authorization/9.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CrfhX/TAu/8x4K0l8U0GpniJs28ApWPKH3D+Uww0hRljJdwFdTXjMz4fmoEkt3PgDeXTPS5WOT5oK4HDXqkxkQ==",
-      "path": "microsoft.aspnetcore.components.authorization/9.0.1",
-      "hashPath": "microsoft.aspnetcore.components.authorization.9.0.1.nupkg.sha512"
+      "sha512": "sha512-maOE1qlJ9hf1Fb7PhFLw9bgP9mWckuDOcn1uKNt9/msdJG2YHl3cPRHojYa6CxliGHIXL8Da4qPgeUc4CaOoeg==",
+      "path": "microsoft.aspnetcore.components.analyzers/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.9.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.Forms/9.0.0": {
       "type": "package",
@@ -418,12 +400,47 @@
       "path": "microsoft.aspnetcore.components.webassembly.server/9.0.0",
       "hashPath": "microsoft.aspnetcore.components.webassembly.server.9.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Metadata/9.0.1": {
+    "Microsoft.AspNetCore.Metadata/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EZnHifamF7IFEIyjAKMtJM3I/94OIe72i3P09v5oL0twmsmfQwal6Ni3m8lbB5mge3jWFhMozeW+rUdRSqnXRQ==",
-      "path": "microsoft.aspnetcore.metadata/9.0.1",
-      "hashPath": "microsoft.aspnetcore.metadata.9.0.1.nupkg.sha512"
+      "sha512": "sha512-X81C891nMuWgzNHyZ0C3s+blSDxRHzQHDFYQoOKtFvFuxGq3BbkLbc5CfiCqIzA/sWIfz6u8sGBgwntQwBJWBw==",
+      "path": "microsoft.aspnetcore.metadata/9.0.0",
+      "hashPath": "microsoft.aspnetcore.metadata.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wpG+nfnfDAw87R3ovAsUmjr3MZ4tYXf6bFqEPVAIKE6IfPml3DS//iX0DBnf8kWn5ZHSO5oi1m4d/Jf+1LifJQ==",
+      "path": "microsoft.entityframeworkcore/9.0.0",
+      "hashPath": "microsoft.entityframeworkcore.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fnmifFL8KaA4ZNLCVgfjCWhZUFxkrDInx5hR4qG7Q8IEaSiy/6VOSRFyx55oH7MV4y7wM3J3EE90nSpcVBI44Q==",
+      "path": "microsoft.entityframeworkcore.abstractions/9.0.0",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qje+DzXJOKiXF72SL0XxNlDtTkvWWvmwknuZtFahY5hIQpRKO59qnGuERIQ3qlzuq5x4bAJ8WMbgU5DLhBgeOQ==",
+      "path": "microsoft.entityframeworkcore.analyzers/9.0.0",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FPWZAa9c0H4dvOj351iR1jkUIs4u9ykL4Bm592yhjDyO5lCoWd+TMAHx2EMbarzUvCvgjWjJIoC6//Q9kH6YhA==",
+      "path": "microsoft.extensions.caching.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.caching.abstractions.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Memory/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zbnPX/JQ0pETRSUG9fNPBvpIq42Aufvs15gGYyNIMhCun9yhmWihz0WgsI7bSDPjxWTKBf8oX/zv6v2uZ3W9OQ==",
+      "path": "microsoft.extensions.caching.memory/9.0.0",
+      "hashPath": "microsoft.extensions.caching.memory.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.1": {
       "type": "package",
@@ -585,20 +602,6 @@
       "sha512": "sha512-XCwbK7ErgZdrwl4ph+i8X5SCGwAepBFbsNIEceozGzrBFVvZbKKJE1WQOft9QyglP4me+DECdVVL8UnI6OO+sg==",
       "path": "microsoft.identitymodel.logging/8.3.1",
       "hashPath": "microsoft.identitymodel.logging.8.3.1.nupkg.sha512"
-    },
-    "Microsoft.IdentityModel.Protocols/8.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-uA2vpKqU3I2mBBEaeJAWPTjT9v1TZrGWKdgK6G5qJd03CLx83kdiqO9cmiK8/n1erkHzFBwU/RphP83aAe3i3g==",
-      "path": "microsoft.identitymodel.protocols/8.0.1",
-      "hashPath": "microsoft.identitymodel.protocols.8.0.1.nupkg.sha512"
-    },
-    "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AQDbfpL+yzuuGhO/mQhKNsp44pm5Jv8/BI4KiFXR7beVGZoSH35zMV3PrmcfvSTsyI6qrcR898NzUauD6SRigg==",
-      "path": "microsoft.identitymodel.protocols.openidconnect/8.0.1",
-      "hashPath": "microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Tokens/8.3.1": {
       "type": "package",

@@ -1,6 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 
-@* <CascadingAuthenticationState> *@
+<CascadingAuthenticationState>
     <Router AdditionalAssemblies="new[] { typeof(PassGuard.Web.Client._Imports).Assembly }"
             AppAssembly="typeof(Program).Assembly">
         <Found Context="routeData">
@@ -10,4 +10,4 @@
                              Selector="h1"/>
         </Found>
     </Router>
-@* </CascadingAuthenticationState> *@
+</CascadingAuthenticationState>

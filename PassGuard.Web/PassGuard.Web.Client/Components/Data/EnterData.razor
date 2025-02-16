@@ -1,50 +1,114 @@
-﻿<h3>EnterData</h3>
+﻿@inject HttpClient HttpClient
+@using System.Net
+@using PassGuard.Shared.Models
+@using PassGuard.Shared.State
+@inject PasswordState PasswordState
 
-@using System.Text.RegularExpressions
-@using System.ComponentModel.DataAnnotations
+<h3>EnterData</h3>
 
 <MudGrid>
     <MudItem xs="12" sm="7">
         <MudPaper Class="pa-4">
-            <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+            @if (errorConflict)
+            {
+                <MudAlert Severity="Severity.Error"
+                          ShowCloseIcon="true"
+                          CloseIconClicked="(() => CloseErrorConflict())"
+                          Style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
+                            background-color: rgba(255, 255, 255, 0.9); z-index: 10; padding: 16px; border-radius: 8px; 
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            max-width: 400px; width: 100%">Ce site avec ce nom d'utilisateur existe déjà</MudAlert>
+            }
+            @if (addedPasswordOk)
+            {
+                <MudAlert Severity="Severity.Success"
+                          ShowCloseIcon="true"
+                          CloseIconClicked="(() => CloseAddedPassword())"
+                          Style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
+                            background-color: rgba(255, 255, 255, 0.9); z-index: 10; padding: 16px; border-radius: 8px; 
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            max-width: 400px; width: 100%">Vous mot passe a été ajouté avec succés !!</MudAlert>
+            }
+            
+            <MudForm @ref="_form" @bind-IsValid="@_success">
                 <MudTextField T="string"
                               Label="Site"
                               Required="true"
-                              RequiredError="User name is required!"
-                />
+                              RequiredError="Le site est nécessaire !"
+                              @bind-Value="@_objectPassword.Site"/>
                 <MudTextField T="string"
                               Label="Nom Utilisateur"
-                              HelperText="Choose a strong password"
-                              @ref="pwField1"
+                              Required="true"
+                              RequiredError="Le nom d'utilisateur est nécessaire !"
+                              @bind-Value="@_objectPassword.Username"/>
+                <MudTextField T="string"
+                              Label="Mot de passe"
+                              Required="true"
+                              RequiredError="Le mot de passe est nécessaire !"
                               InputType="InputType.Password"
-                />
+                              @bind-Value="@_objectPassword.Password"/>
+
                 <MudTextField T="string"
-                              Label="Mot de passe" HelperText="Repeat the password" InputType="InputType.Password"/>
-                <MudTextField T="string"
-                              Label="Remarque" HelperText="Repeat the password" InputType="InputType.Password"/>
-            </MudForm>   
+                              Label="Catégorie"
+                              Required="true"
+                              RequiredError="La catégorie est nécessaire !"
+                              @bind-Value="@_objectPassword.Category"/>
+            </MudForm>
         </MudPaper>
         <MudPaper Class="pa-4 mt-4">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" DropShadow="false" OnClick="@(()=>form.Validate())">Validate</MudButton>
-            <MudButton Variant="Variant.Filled" Color="Color.Secondary" DropShadow="false" OnClick="@(()=>form.ResetAsync())" Class="mx-2">Reset</MudButton>
-            <MudButton Variant="Variant.Filled" DropShadow="false" OnClick="@(()=>form.ResetValidation())">Reset Validation</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="5">
-        <MudPaper Class="pa-4 mud-height-full">
-            <MudText Typo="Typo.subtitle2">@($"Errors ({errors.Length})")</MudText>
-                @foreach (var error in errors)
-                {
-                    <MudText Color="@Color.Error">@error</MudText>
-                }
+            <MudButton Variant="Variant.Filled" 
+                       Color="Color.Primary"
+                       DropShadow="false"
+                       OnClick="@(() =>
+                                {
+                                    _form?.Validate();
+                                    SubmitForm();
+                                })">Ajouter</MudButton>
         </MudPaper>
     </MudItem>
 </MudGrid>
 
 
 @code {
-    bool success;
-    string[] errors = { };
-    MudTextField<string> pwField1;
-    MudForm form;
+    bool _success;
+    MudTextField<string>? _pwField1;
+    MudForm? _form;
+    private bool errorConflict = false;
+    private bool addedPasswordOk = false;
+
+    ObjectPassword _objectPassword = new ObjectPassword();
+
+    private async Task SubmitForm()
+    {
+        var content = JsonContent.Create(_objectPassword);
+
+        var response = await HttpClient.PostAsync("https://localhost:7012/api/password/postpassword", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            await PasswordState.GetPasswordArray();
+            _objectPassword = new ObjectPassword();
+            addedPasswordOk = true;
+            StateHasChanged();       
+        }
+
+        if (response.StatusCode == HttpStatusCode.Conflict)
+        {
+            errorConflict = true;
+            StateHasChanged();
+        }
+        
+    }
+
+    private void CloseErrorConflict()
+    {
+        errorConflict = false;
+        StateHasChanged();
+    }
+
+    private void CloseAddedPassword()
+    {
+        addedPasswordOk = false;
+        StateHasChanged();
+    }
 }
