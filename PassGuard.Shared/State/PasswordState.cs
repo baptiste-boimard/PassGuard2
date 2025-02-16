@@ -35,7 +35,9 @@ public class PasswordState
         
         if (response.IsSuccessStatusCode)
         {
-            ObjectPassword[] passwordArray = await response.Content.ReadFromJsonAsync<ObjectPassword[]>();
+            ObjectPassword[] passwordArray = (await response.Content.ReadFromJsonAsync<ObjectPassword[]>())
+                .OrderBy(p => p.Category)
+                .ToArray();
             SetPasswordArray(passwordArray);
         }
         else
