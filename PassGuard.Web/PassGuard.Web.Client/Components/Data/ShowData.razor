@@ -3,11 +3,13 @@
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 @inject HttpClient HttpClient
 @inject PasswordState PasswordState
+@using System.Text.RegularExpressions
+
 
 
 @rendermode InteractiveWebAssembly
 
-<MudTable Items="@_passwordArray" Dense=true Hover=true Bordered=true Striped=true>
+<MudTable Items="@FilteredPasswordArray" Dense=true Hover=true Bordered=true Striped=true>
     <ToolBarContent>
         <MudText Typo="Typo.h6">Liste de vos mots de passe</MudText>
         <MudSpacer />
@@ -42,10 +44,22 @@
         }
         else
         {
-            <MudTd DataLabel="Site" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Site</MudTd>
-            <MudTd DataLabel="Nom d'utilisateur" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Username</MudTd>
-            <MudTd DataLabel="Mot de passe" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Password</MudTd>
-            <MudTd DataLabel="Catégorie" @ondblclick="@(() => OnRowDoubleClick(@context))">@context.Category</MudTd>
+            <MudTd DataLabel="Site"
+                   @ondblclick="@(() => OnRowDoubleClick(@context))">
+                @((MarkupString)HighlightText(@context.Site))
+            </MudTd>
+            <MudTd DataLabel="Nom d'utilisateur"
+                   @ondblclick="@(() => OnRowDoubleClick(@context))">
+                @((MarkupString)HighlightText(@context.Username))
+            </MudTd>
+            <MudTd DataLabel="Mot de passe"
+                   @ondblclick="@(() => OnRowDoubleClick(@context))">
+                @((MarkupString)HighlightText(@context.Password))
+            </MudTd>
+            <MudTd DataLabel="Catégorie"
+                   @ondblclick="@(() => OnRowDoubleClick(@context))">
+                @((MarkupString)HighlightText(@context.Category))
+            </MudTd>
         }
     </RowTemplate>
 </MudTable>
@@ -102,4 +116,42 @@
         editingItem = null;
         StateHasChanged();
     }
-}
+    
+    private ObjectPassword[] FilteredPasswordArray =>
+        _passwordArray is null ? Array.Empty<ObjectPassword>() :
+            string.IsNullOrWhiteSpace(searchString1)
+                ? _passwordArray
+                : _passwordArray.Where(p =>
+                    (!string.IsNullOrEmpty(p.Site) && p.Site.Contains(searchString1, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(p.Username) && p.Username.Contains(searchString1, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(p.Category) && p.Category.Contains(searchString1, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(p.Password) && p.Password.Contains(searchString1, StringComparison.OrdinalIgnoreCase))
+                ).ToArray();
+    
+    private string GetHighlightStyle(string? text)
+    {
+        if (string.IsNullOrWhiteSpace(searchString1) || string.IsNullOrWhiteSpace(text))
+            return string.Empty;
+
+        return text.Contains(searchString1, StringComparison.OrdinalIgnoreCase)
+            ? "background-color: yellow; font-weight: bold;"
+            : string.Empty;
+    }
+    
+    private MarkupString HighlightText(string text)
+    {
+        if (string.IsNullOrWhiteSpace(searchString1))
+        {
+            // Aucun terme de recherche, renvoyer le texte sans modification
+            return new MarkupString(text);
+        }
+
+        // Échapper la chaîne recherchée pour l'utiliser en regex
+        string pattern = Regex.Escape(searchString1);
+        // Définir le remplacement avec le style (ici, fond jaune et texte en gras)
+        string replacement = $"<span style=\"background-color: yellow; font-weight: bold;\">$0</span>";
+        // Remplacer en ignorant la casse
+        string result = Regex.Replace(text, pattern, replacement, RegexOptions.IgnoreCase);
+        return new MarkupString(result);
+    }
+}   

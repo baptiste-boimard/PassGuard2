@@ -11,11 +11,13 @@ namespace PassGuard.Api.Repositories;
 
 public class AuthRepository
 {
-    private readonly PostgresDbContext _postgresDbContext;
+    private readonly SqliteDbContext _sqliteDbContext;
+    // private readonly PostgresDbContext _sqliteDbContext;
 
-    public AuthRepository(PostgresDbContext postgresDbContext)
+    public AuthRepository(SqliteDbContext sqliteDbContext)
     {
-        _postgresDbContext = postgresDbContext;
+        _sqliteDbContext = sqliteDbContext;
+        // _sqliteDbContext = postgresDbContext;
     }
 
     public async Task<AccountDTO> SaveNewAccount(RegisterAccountForm registerAccountForm)
@@ -43,8 +45,8 @@ public class AuthRepository
             CreatedAt = DateTime.UtcNow
         };
         
-        _postgresDbContext.Accounts.Add(newAccount);
-        _postgresDbContext.SaveChangesAsync();
+        _sqliteDbContext.Accounts.Add(newAccount);
+        _sqliteDbContext.SaveChangesAsync();
 
         var newAccountDTO = new AccountDTO
         {
@@ -59,7 +61,7 @@ public class AuthRepository
     public async Task<Account?> VerifyExistingAccount(RegisterAccountForm registerAccountForm)
     {
         // Recherche si un compte avec le même Username existe déjà
-        var existingAccount = await _postgresDbContext.Accounts
+        var existingAccount = await _sqliteDbContext.Accounts
             .FirstOrDefaultAsync(
                 a => a.Username == registerAccountForm.Username);
 
@@ -74,7 +76,7 @@ public class AuthRepository
     public async Task<AccountDTO> Login(LoginAccountForm loginAccountForm)
     {
         // Recherche de l'utilisateur et comparaison du mot de passe
-        var existingAccount = await _postgresDbContext.Accounts
+        var existingAccount = await _sqliteDbContext.Accounts
             .FirstOrDefaultAsync(
                 a => a.Username == loginAccountForm.Username);
         if (existingAccount == null)

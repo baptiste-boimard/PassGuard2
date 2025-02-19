@@ -12,16 +12,16 @@ namespace PassGuard.Api.Repositories;
 
 public class DataRepository
 {
-    public PostgresDbContext _postgresDbContext { get; }
+    public SqliteDbContext _sqliteDbContext { get; }
 
-    public DataRepository(PostgresDbContext postgresDbContext)
+    public DataRepository(SqliteDbContext sqliteDbContext)
     {
-        _postgresDbContext = postgresDbContext;
+        _sqliteDbContext = sqliteDbContext;
     }
 
     public async Task<ObjectPassword?> VerifyExistingOne(ObjectPasswordForm? objectPassword)
     {
-        var existingOne = _postgresDbContext.ObjectPasswords
+        var existingOne = _sqliteDbContext.ObjectPasswords
             .FirstOrDefault(
                 a => a.Site == objectPassword!.Site &&
                      a.Username == objectPassword.Username)!;
@@ -61,8 +61,8 @@ public class DataRepository
             CreatedAt = DateTime.UtcNow
         };
 
-        _postgresDbContext.ObjectPasswords.Add(newObjectPassword);
-        _postgresDbContext.SaveChangesAsync();
+        _sqliteDbContext.ObjectPasswords.Add(newObjectPassword);
+        _sqliteDbContext.SaveChangesAsync();
 
         var newObjectPasswordDTO = new ObjectPasswordDTO
         {
@@ -79,7 +79,7 @@ public class DataRepository
 
     public async Task<ObjectPassword[]> GetPasswords()
     {
-        ObjectPassword[] passwordArray = _postgresDbContext.ObjectPasswords.ToArray();
+        ObjectPassword[] passwordArray = _sqliteDbContext.ObjectPasswords.ToArray();
 
         if (passwordArray == null)
         {
@@ -91,13 +91,13 @@ public class DataRepository
 
     public async Task<ObjectPassword> PatchPassword(Guid id, ObjectPassword objectPassword)
     {
-        var modifiedPassword = await _postgresDbContext.ObjectPasswords.FindAsync(id);
+        var modifiedPassword = await _sqliteDbContext.ObjectPasswords.FindAsync(id);
 
         if (modifiedPassword == null) return null;
 
-        _postgresDbContext.Entry(modifiedPassword).CurrentValues.SetValues(objectPassword);
+        _sqliteDbContext.Entry(modifiedPassword).CurrentValues.SetValues(objectPassword);
         
-        await _postgresDbContext.SaveChangesAsync();
+        await _sqliteDbContext.SaveChangesAsync();
 
         return modifiedPassword;
     }
@@ -105,12 +105,12 @@ public class DataRepository
     public async Task<ObjectPassword> DeletePassword(Guid id)
     {
         var deletedPassword =
-            await _postgresDbContext.ObjectPasswords.FindAsync(id);
+            await _sqliteDbContext.ObjectPasswords.FindAsync(id);
 
         if (deletedPassword == null) return null;
         
-        _postgresDbContext.ObjectPasswords.Remove( deletedPassword);
-        await _postgresDbContext.SaveChangesAsync();
+        _sqliteDbContext.ObjectPasswords.Remove( deletedPassword);
+        await _sqliteDbContext.SaveChangesAsync();
 
         return deletedPassword;
     }

@@ -15,9 +15,11 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<AuthRepository>();
 builder.Services.AddScoped<DataRepository>();
 
-// Service de la base de données
-builder.Services.AddDbContext<PostgresDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresDBContext")));
+// // Service de la base de données
+// builder.Services.AddDbContext<PostgresDbContext>(options =>
+//     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresDBContext")));
+builder.Services.AddDbContext<SqliteDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("SqliteDBContext")));
 
 // Ajout des Cors Policy
 builder.Services.AddCors(options =>
