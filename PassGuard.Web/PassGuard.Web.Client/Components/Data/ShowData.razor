@@ -4,10 +4,11 @@
 @inject HttpClient HttpClient
 @inject PasswordState PasswordState
 @using System.Text.RegularExpressions
-
-
+@inject IDialogService DialogService
 
 @rendermode InteractiveWebAssembly
+
+<MudDialogProvider />
 
 <MudTable Items="@FilteredPasswordArray" Dense=true Hover=true Bordered=true Striped=true>
     <ToolBarContent>
@@ -53,8 +54,23 @@
                 @((MarkupString)HighlightText(@context.Username))
             </MudTd>
             <MudTd DataLabel="Mot de passe"
-                   @ondblclick="@(() => OnRowDoubleClick(@context))">
-                @((MarkupString)HighlightText(@context.Password))
+                   @ondblclick="@(() => OnRowDoubleClick(@context))"
+                   style="width: 30rem; min-width: 30rem;">
+                <div style="display: flex; align-items: center;">
+                    <span>
+                        @(IsPasswordVisible(@context.Id)
+                            ? @context.Password 
+                            : new string('•',20))
+                    </span>
+                        <MudIconButton Icon="@(IsPasswordVisible(@context.Id) ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
+                                       Color="Color.Info"
+                                       Size="Size.Small"
+                                       Style="margin-left: 1rem;"
+                                       OnClick="@(() => SomeMethod())" />
+                        <MudButton @onclick="OpenDialogAsync" Variant="Variant.Filled" Color="Color.Primary">
+                            Open Simple Dialog
+                        </MudButton>
+                </div>
             </MudTd>
             <MudTd DataLabel="Catégorie"
                    @ondblclick="@(() => OnRowDoubleClick(@context))">
@@ -68,6 +84,8 @@
     private ObjectPassword[]? _passwordArray;
     private string searchString1 = "";
     private ObjectPassword? editingItem;
+    
+    private Dictionary<Guid, bool> passwordVisibility = new Dictionary<Guid, bool>();
     
     protected async override Task OnInitializedAsync()
     {
@@ -142,16 +160,56 @@
     {
         if (string.IsNullOrWhiteSpace(searchString1))
         {
-            // Aucun terme de recherche, renvoyer le texte sans modification
             return new MarkupString(text);
         }
 
-        // Échapper la chaîne recherchée pour l'utiliser en regex
         string pattern = Regex.Escape(searchString1);
-        // Définir le remplacement avec le style (ici, fond jaune et texte en gras)
         string replacement = $"<span style=\"background-color: yellow; font-weight: bold;\">$0</span>";
-        // Remplacer en ignorant la casse
         string result = Regex.Replace(text, pattern, replacement, RegexOptions.IgnoreCase);
         return new MarkupString(result);
     }
+    
+    private bool IsPasswordVisible(Guid id)
+    {
+        return passwordVisibility.ContainsKey(id) && passwordVisibility[id];
+    }
+
+    private void TogglePasswordVisibility(Guid id)
+    {
+        if (passwordVisibility.ContainsKey(id))
+        {
+            passwordVisibility[id] = !passwordVisibility[id];
+        }
+        else
+        {
+            passwordVisibility[id] = true;
+        }
+        StateHasChanged();
+    }
+    
+    private void ToggleVisibilityAfterConfirmation(Guid id)
+    {
+        if (passwordVisibility.ContainsKey(id))
+        {
+            passwordVisibility[id] = !passwordVisibility[id];
+        }
+        else
+        {
+            passwordVisibility[id] = true;
+        }
+        StateHasChanged();
+    }
+
+    private void SomeMethod()
+    {
+        
+    }
+    
+    private Task OpenDialogAsync()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+
+        return DialogService.ShowAsync<PasswordConfirm>("Simple Dialog", options);
+    }
+    
 }   

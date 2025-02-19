@@ -5,7 +5,7 @@ build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.MudDebugAnalyzer = 
 build_property.MudAllowedAttributePattern = 
-build_property.MudIllegalParameters = 
+build_property.MudAllowedAttributeList = 
 build_property.TargetFramework = net9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -27,8 +27,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/CustomModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXEN1c3RvbU1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/EnterData.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXEVudGVyRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/PasswordConfirm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXFBhc3N3b3JkQ29uZmlybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/ShowData.razor]
