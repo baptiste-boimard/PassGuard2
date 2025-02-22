@@ -51,4 +51,18 @@ public class AuthController : ControllerBase
 
         return Ok(token);
     }
+
+    [HttpPost]
+    [Route("verifypass")]
+    public async Task<IActionResult> VerifyPassword([FromBody] VerifyPassword payload)
+    {
+        var DecryptedPassword = await _authRepository.VerifyPassword(payload);
+
+        if (DecryptedPassword != null)
+        {
+            return Ok(DecryptedPassword);
+        }
+
+        return Unauthorized(new { message = "Vous n'êtes pas un utilisateur reconnu" });
+    }
 }

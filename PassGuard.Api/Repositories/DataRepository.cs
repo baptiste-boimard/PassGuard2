@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using PassGuard.Api.Database;
+using PassGuard.Api.Service;
 using PassGuard.Shared.DTO;
 using PassGuard.Shared.Models;
 using static PassGuard.Api.Service.PepperKey;
@@ -36,18 +37,7 @@ public class DataRepository
 
     public async Task<ObjectPasswordDTO> SaveNewObjectPassword(ObjectPasswordForm objectPassword)
     {
-        // Création du salt
-        var saltBytes = new byte[16];
-        RandomNumberGenerator.Create().GetBytes(saltBytes);
-        var salt = Convert.ToBase64String(saltBytes);
-        
-        // Récupération de la PepperKey
-        var pepperKey = LoadPepperKey();
-        
-        // Combinaison du salt et du mot de passe
-        var passwordBytes = Encoding.UTF8.GetBytes(objectPassword.Password + salt);
-        var hashBytes = new HMACSHA256(pepperKey).ComputeHash(passwordBytes);
-        var hash = Convert.ToBase64String(hashBytes);
+        var cryptedPass = AESService.EncryptString(objectPassword.Password);
         
         //Création du nouveau ObjectPassword
         var newObjectPassword = new ObjectPassword
@@ -55,9 +45,9 @@ public class DataRepository
             Id = Guid.NewGuid(),
             Site = objectPassword.Site,
             Username = objectPassword.Username,
-            Password = hash,
+            Password = cryptedPass,
             Category = objectPassword.Category,
-            Salt = salt,
+            Salt = cryptedPass,
             CreatedAt = DateTime.UtcNow
         };
 
@@ -94,7 +84,14 @@ public class DataRepository
         var modifiedPassword = await _sqliteDbContext.ObjectPasswords.FindAsync(id);
 
         if (modifiedPassword == null) return null;
-
+        
+        // Si c'est un nouveau mot de passe on le crypte
+        if (objectPassword.Password != modifiedPassword.Password)
+        {
+            var cryptedPass = AESService.EncryptString(objectPassword.Password);
+            objectPassword.Password = cryptedPass;
+        }
+        
         _sqliteDbContext.Entry(modifiedPassword).CurrentValues.SetValues(objectPassword);
         
         await _sqliteDbContext.SaveChangesAsync();

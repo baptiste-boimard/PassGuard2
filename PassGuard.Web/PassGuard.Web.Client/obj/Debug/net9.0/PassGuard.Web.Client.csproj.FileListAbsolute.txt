@@ -54,8 +54,6 @@ C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\b
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\mscorlib.5q5u0swn6q.wasm
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\MudBlazor.48fc1p6rs2.wasm
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\netstandard.w8gk1pigg1.wasm
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.vtxuxcgdy1.pdb
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.7c1ez2176a.wasm
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.AppContext.uyzczx3u46.wasm
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Buffers.gb72qmeqj8.wasm
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Collections.Concurrent.aos1w28dak.wasm
@@ -281,7 +279,6 @@ C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\b
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.IO.Pipelines.azvmy69isl.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Diagnostics.FileVersionInfo.dx9fb95hwm.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.q5if44af42.wasm.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.7c1ez2176a.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Xml.Linq.klzmsxmq67.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Net.NetworkInformation.2xxvg1ez8o.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Configuration.h7p166i5j0.wasm.gz
@@ -354,7 +351,6 @@ C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\b
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.CompilerServices.Unsafe.mx06pw429a.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Windows.7tfud34p1p.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.IO.MemoryMappedFiles.ouhgi9p8ne.wasm.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.vtxuxcgdy1.pdb.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Private.Uri.zzcx82pbz8.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.Extensions.zrdc0l1x3v.wasm.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\System.IO.Pipes.viel7aptuc.wasm.gz
@@ -1109,8 +1105,6 @@ C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\o
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\x5v8bvbyq3-tjcz0u77k5.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\2o4uz5jbmt-tptq2av103.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\ho0ch0av3t-lfu7j35m59.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\b5i0s4h7ra-7c1ez2176a.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\nfxms4vx7b-vtxuxcgdy1.gz
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1125,10 +1119,16 @@ C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\o
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\refint\PassGuard.Web.Client.dll
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\PassGuard.Web.Client.pdb
 C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\ref\PassGuard.Web.Client.dll
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.lc958647u8.pdb
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.y90gbq6dxz.wasm
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.lc958647u8.pdb.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.y90gbq6dxz.wasm.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\ogho2wbe6j-y90gbq6dxz.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\1jnqd0spd7-lc958647u8.gz
-C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\salsx4iguc-xfjtanfk9r.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.yg8jlb04cq.pdb
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.hwd46m2hsh.wasm
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.hwd46m2hsh.wasm.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Shared.yg8jlb04cq.pdb.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\b5i0s4h7ra-hwd46m2hsh.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\nfxms4vx7b-yg8jlb04cq.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.gubh7bcmv0.pdb
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.fpuu2jsmhw.wasm
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.gubh7bcmv0.pdb.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\bin\Debug\net9.0\wwwroot\_framework\PassGuard.Web.Client.fpuu2jsmhw.wasm.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\ogho2wbe6j-fpuu2jsmhw.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\1jnqd0spd7-gubh7bcmv0.gz
+C:\Users\bapti\RiderProjects\Pass\PassGuard\PassGuard.Web\PassGuard.Web.Client\obj\Debug\net9.0\compressed\salsx4iguc-g6tt5az3z9.gz

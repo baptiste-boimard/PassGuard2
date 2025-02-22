@@ -1,7 +1,10 @@
-﻿using System.Security.Cryptography;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using PassGuard.Api.Database;
+using PassGuard.Api.Service;
 using PassGuard.Shared.DTO;
 using PassGuard.Shared.Models;
 using static PassGuard.Api.Service.PepperKey;
@@ -105,5 +108,51 @@ public class AuthRepository
         }; 
         
         return existingAccountDTO;
+    }
+
+    public async Task<string> VerifyPassword(VerifyPassword payload)
+    {
+        // Décodage du token
+        var token = new JwtSecurityTokenHandler().ReadJwtToken(payload.Token);
+        var subClaim = token.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub);
+
+        if (subClaim == null) return null;
+        
+        // Recherche du user avec son id
+        if (!Guid.TryParse(subClaim.Value, out Guid userId)) return null;
+        
+        var user = _sqliteDbContext.Accounts.Find(userId);
+        
+        if (user == null) return null;
+        
+        // Récupération de la PepperKey
+        var pepperKey = LoadPepperKey();
+        
+        // Comparaison des hash entre eux
+        var passwordBytes = Encoding.UTF8.GetBytes(payload.Password + user.Salt);
+        var computedHash  = new HMACSHA256(pepperKey).ComputeHash(passwordBytes);
+        var computedHashString  = Convert.ToBase64String(computedHash);
+        
+        if (user.Password == computedHashString)
+        {
+            // Récupération de l'ObjectPassword
+            var objectPassword = _sqliteDbContext.ObjectPasswords.Find(payload.IdLine);
+            
+            // Decryptage du mot de passe
+            try
+            {
+                var decryptedResult = AESService.DecryptString(objectPassword.Password);
+                
+                return decryptedResult;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
+        
+        return null;
     }
 }

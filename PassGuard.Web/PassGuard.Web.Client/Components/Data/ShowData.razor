@@ -14,7 +14,10 @@
     <ToolBarContent>
         <MudText Typo="Typo.h6">Liste de vos mots de passe</MudText>
         <MudSpacer />
-        <MudTextField @bind-Value="searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        <MudTextField @bind-Value="searchString1" Placeholder="Recherche" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <ToolBarContent>
+        <MudText Typo="Typo.h6" Style="font-size: 0.8rem">Double cliquez sur une ligne pour l'éditer</MudText>
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Site</MudTh>
@@ -31,8 +34,35 @@
             <MudTd DataLabel="Nom d'utilisateur" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Username" />
             </MudTd>
-            <MudTd DataLabel="Mot de passe" style="background-color: rgba(166,166,166,0.75)">
-                <MudTextField T="string" @bind-Value="editingItem.Password" />
+            
+            <MudTd DataLabel="Mot de passe" 
+                    style="background-color: rgba(166,166,166,0.75); width: 30rem; min-width: 30rem">
+                <div style="display: flex; align-items: center">
+                    <span>
+                        <MudTextField T="string" @bind-Value="editingItem.Password"
+                                      InputType="@(IsPasswordVisible(context.Id) ? InputType.Text : InputType.Password)"
+                                      />
+                    </span>
+                    <MudIconButton Icon="@(IsPasswordVisible(@context.Id) ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
+                                   Color="Color.Info"
+                                   Size="Size.Small"
+                                   Style="margin-left: 1rem;"
+                                   OnClick="@(async () =>
+                                            {
+                                                if (isLocked)
+                                                {
+                                                    Console.WriteLine("C'est bloqué");
+                                                }
+                                                else if (IsPasswordVisible(context.Id))
+                                                {
+                                                    TogglePasswordVisibility(@context.Id);
+                                                }
+                                                else
+                                                {
+                                                    await OpenDialogAsync(@context.Id);
+                                                }
+                                            })"/>
+                </div>
             </MudTd>
             <MudTd DataLabel="Catégorie" style="background-color: rgba(166,166,166,0.75)">
                 <MudTextField T="string" @bind-Value="editingItem.Category" />
@@ -62,14 +92,24 @@
                             ? @context.Password 
                             : new string('•',20))
                     </span>
-                        <MudIconButton Icon="@(IsPasswordVisible(@context.Id) ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
-                                       Color="Color.Info"
-                                       Size="Size.Small"
-                                       Style="margin-left: 1rem;"
-                                       OnClick="@(() => SomeMethod())" />
-                        <MudButton @onclick="OpenDialogAsync" Variant="Variant.Filled" Color="Color.Primary">
-                            Open Simple Dialog
-                        </MudButton>
+                    <MudIconButton Icon="@(IsPasswordVisible(@context.Id) ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
+                       Color="Color.Info"
+                       Size="Size.Small"
+                       Style="margin-left: 1rem;"
+                       OnClick="@(async () =>
+                                {
+                                    if (isLocked)
+                                    {
+                                        Console.WriteLine("C'est bloqué");
+                                    }
+                                    else if (IsPasswordVisible(context.Id))
+                                    {
+                                        TogglePasswordVisibility(@context.Id);
+                                    }
+                                    else {
+                                        await OpenDialogAsync(@context.Id);
+                                    }
+                    })" />
                 </div>
             </MudTd>
             <MudTd DataLabel="Catégorie"
@@ -86,6 +126,8 @@
     private ObjectPassword? editingItem;
     
     private Dictionary<Guid, bool> passwordVisibility = new Dictionary<Guid, bool>();
+    private bool isLocked = false;
+    private int failureCount = 0;
     
     protected async override Task OnInitializedAsync()
     {
@@ -117,7 +159,8 @@
     private async void SaveChanges()
     {
         await PasswordState.UpdatePasword(editingItem);
-        
+
+        passwordVisibility[editingItem.Id] = false;
         editingItem = null;
         StateHasChanged();
     }
@@ -191,25 +234,81 @@
     {
         if (passwordVisibility.ContainsKey(id))
         {
-            passwordVisibility[id] = !passwordVisibility[id];
-        }
-        else
-        {
             passwordVisibility[id] = true;
         }
+
         StateHasChanged();
     }
-
-    private void SomeMethod()
-    {
-        
-    }
     
-    private Task OpenDialogAsync()
+    private async Task OpenDialogAsync(Guid id)
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
 
-        return DialogService.ShowAsync<PasswordConfirm>("Simple Dialog", options);
+        var dialog = DialogService.Show<PasswordConfirm>("Confirmez votre mot de passe", options);
+
+        var result = await dialog.Result;
+        
+        if (result != null)
+        {
+            var enteredPassword = result.Data.ToString();
+            SubmitPassword(enteredPassword, id);
+        }
+    }
+
+    private async Task SubmitPassword(string password, Guid id)
+    {
+        var payload = new VerifyPassword()
+        {
+            Password = password,
+            Token = await localStorage.GetItemAsync<string>("token"),
+            IdLine = id
+            
+        };
+        
+        var content = JsonContent.Create(payload);
+
+        var response = await HttpClient.PostAsync("https://localhost:7012/api/auth/verifypass", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var decryptedPass = await response.Content.ReadAsStringAsync();
+
+            // J'ajoute la visibilité True pour mon id dans mon dict
+            passwordVisibility[id] = true;
+
+            // ToggleVisibilityAfterConfirmation(id);
+            
+            if(editingItem != null && editingItem.Id == id) editingItem.Password = decryptedPass;
+            
+            // Mise à jour de la cellule
+            var targetCell =
+                _passwordArray?.FirstOrDefault(p => p.Id == id);
+            
+            if (targetCell != null) targetCell.Password = decryptedPass; 
+            StateHasChanged();
+
+            // if (passwordVisibility.ContainsKey(id))
+            //     passwordVisibility[id] = true;
+            // else
+            //     passwordVisibility.Add(id, true);
+            
+            failureCount = 0;
+            isLocked = false;
+        }
+        else
+        {
+            failureCount ++;
+
+            if (failureCount >= 3)
+            {
+                isLocked = true;
+                failureCount = 0;
+                
+                await Task.Delay(30000);
+                isLocked = false;
+                StateHasChanged();
+            }
+        }
     }
     
 }   
