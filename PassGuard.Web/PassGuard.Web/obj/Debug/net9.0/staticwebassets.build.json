@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gkUnUpyFmgTosLl/5olFJ/XEAV8ux4Qv6NhmxZRxoqw=",
+  "Hash": "X81ahlzwhA/rSD4o0k8oaN1w0YPw7j009hk8bgp5u3o=",
   "Source": "PassGuard.Web",
   "BasePath": "_content/PassGuard.Web",
   "Mode": "Default",
@@ -92,8 +92,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "g6tt5az3z9",
-      "Integrity": "+LXgn3Riq5Mu2M6eSB0GeneqVVEUJY0ZfoSyVDd+yNQ=",
+      "Fingerprint": "vnwwuht9r0",
+      "Integrity": "pcBiC2zYFBDp7uBjwbgyXK7AxlcqVzoor/sYqyHVMPE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -1268,8 +1268,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "yg8jlb04cq",
-      "Integrity": "Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=",
+      "Fingerprint": "efj3yzk8kh",
+      "Integrity": "GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.pdb"
@@ -1289,8 +1289,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "hwd46m2hsh",
-      "Integrity": "YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=",
+      "Fingerprint": "nuy86mfk2o",
+      "Integrity": "bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.wasm"
@@ -1310,8 +1310,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "gubh7bcmv0",
-      "Integrity": "OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg=",
+      "Fingerprint": "7fbn3hncz6",
+      "Integrity": "bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.pdb"
@@ -1331,8 +1331,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "fpuu2jsmhw",
-      "Integrity": "86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo=",
+      "Fingerprint": "afbggd02ec",
+      "Integrity": "1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.wasm"
@@ -4971,12 +4971,12 @@
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jlq4a87js-aaggt1tf7y.gz"
     },
     {
-      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz",
+      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz",
       "SourceId": "PassGuard.Web.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/PassGuard.Web.Client#[.{fingerprint=gubh7bcmv0}]!.pdb.gz",
+      "RelativePath": "_framework/PassGuard.Web.Client#[.{fingerprint=7fbn3hncz6}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -4985,11 +4985,11 @@
       "RelatedAsset": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "p8nr5p61xb",
-      "Integrity": "aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w=",
+      "Fingerprint": "522pm1x2xn",
+      "Integrity": "Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz"
+      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz"
     },
     {
       "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1qfkxs8owp-abfgywtr1q.gz",
@@ -6084,12 +6084,12 @@
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b4piffyx09-q5if44af42.gz"
     },
     {
-      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz",
+      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz",
       "SourceId": "PassGuard.Web.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/PassGuard.Shared#[.{fingerprint=hwd46m2hsh}]!.wasm.gz",
+      "RelativePath": "_framework/PassGuard.Shared#[.{fingerprint=nuy86mfk2o}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -6098,11 +6098,11 @@
       "RelatedAsset": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "d2npqvjm92",
-      "Integrity": "+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw=",
+      "Fingerprint": "egr8ft448y",
+      "Integrity": "AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz"
+      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz"
     },
     {
       "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5j2icoz7s-klzmsxmq67.gz",
@@ -7659,12 +7659,12 @@
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nc4icfx56z-ouhgi9p8ne.gz"
     },
     {
-      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz",
+      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz",
       "SourceId": "PassGuard.Web.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/PassGuard.Shared#[.{fingerprint=yg8jlb04cq}]!.pdb.gz",
+      "RelativePath": "_framework/PassGuard.Shared#[.{fingerprint=efj3yzk8kh}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7673,11 +7673,11 @@
       "RelatedAsset": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "llvs4wmppg",
-      "Integrity": "+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w=",
+      "Fingerprint": "z38rur0dhb",
+      "Integrity": "MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz"
+      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz"
     },
     {
       "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ngw5qk351h-zzcx82pbz8.gz",
@@ -7911,12 +7911,12 @@
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\oc91d0r62m-pt5yage1o4.gz"
     },
     {
-      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz",
+      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz",
       "SourceId": "PassGuard.Web.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/PassGuard.Web.Client#[.{fingerprint=fpuu2jsmhw}]!.wasm.gz",
+      "RelativePath": "_framework/PassGuard.Web.Client#[.{fingerprint=afbggd02ec}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7925,11 +7925,11 @@
       "RelatedAsset": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fv5tovlko9",
-      "Integrity": "+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18=",
+      "Fingerprint": "kro5cqy6xa",
+      "Integrity": "oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz"
+      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz"
     },
     {
       "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ojr4sooa0o-m4iy4qjs8g.gz",
@@ -8289,7 +8289,7 @@
       "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\s1f71z82hl-nm6e2slhgg.gz"
     },
     {
-      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-g6tt5az3z9.gz",
+      "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-vnwwuht9r0.gz",
       "SourceId": "PassGuard.Web.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
@@ -8303,11 +8303,11 @@
       "RelatedAsset": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6nsgo3s86m",
-      "Integrity": "/kaHuHyWkJvq0FhyBBJNL5K1OS/fZDlP3dDvNBS7yGU=",
+      "Fingerprint": "rion19r4ad",
+      "Integrity": "4/A3j4VeB2xGruw05i9Cjouqw87NTQBX463ueJHnVKw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-g6tt5az3z9.gz"
+      "OriginalItemSpec": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-vnwwuht9r0.gz"
     },
     {
       "Identity": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\sm1gdtb9ti-6q4r5fv3jz.gz",
@@ -12016,28 +12016,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+LXgn3Riq5Mu2M6eSB0GeneqVVEUJY0ZfoSyVDd+yNQ=\""
+          "Value": "\"pcBiC2zYFBDp7uBjwbgyXK7AxlcqVzoor/sYqyHVMPE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+LXgn3Riq5Mu2M6eSB0GeneqVVEUJY0ZfoSyVDd+yNQ="
+          "Value": "sha256-pcBiC2zYFBDp7uBjwbgyXK7AxlcqVzoor/sYqyHVMPE="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-g6tt5az3z9.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-vnwwuht9r0.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000074057617"
+          "Quality": "0.000074085050"
         }
       ],
       "ResponseHeaders": [
@@ -12055,15 +12055,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13502"
+          "Value": "13497"
         },
         {
           "Name": "ETag",
-          "Value": "\"/kaHuHyWkJvq0FhyBBJNL5K1OS/fZDlP3dDvNBS7yGU=\""
+          "Value": "\"4/A3j4VeB2xGruw05i9Cjouqw87NTQBX463ueJHnVKw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 14:53:46 GMT"
+          "Value": "Sat, 22 Feb 2025 23:32:21 GMT"
         },
         {
           "Name": "Vary",
@@ -12075,19 +12075,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+LXgn3Riq5Mu2M6eSB0GeneqVVEUJY0ZfoSyVDd+yNQ=\""
+          "Value": "W/\"pcBiC2zYFBDp7uBjwbgyXK7AxlcqVzoor/sYqyHVMPE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+LXgn3Riq5Mu2M6eSB0GeneqVVEUJY0ZfoSyVDd+yNQ="
+          "Value": "sha256-pcBiC2zYFBDp7uBjwbgyXK7AxlcqVzoor/sYqyHVMPE="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-g6tt5az3z9.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\salsx4iguc-vnwwuht9r0.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12104,7 +12104,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13502"
+          "Value": "13497"
         },
         {
           "Name": "Content-Type",
@@ -12112,11 +12112,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/kaHuHyWkJvq0FhyBBJNL5K1OS/fZDlP3dDvNBS7yGU=\""
+          "Value": "\"4/A3j4VeB2xGruw05i9Cjouqw87NTQBX463ueJHnVKw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 14:53:46 GMT"
+          "Value": "Sat, 22 Feb 2025 23:32:21 GMT"
         },
         {
           "Name": "Vary",
@@ -12126,7 +12126,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/kaHuHyWkJvq0FhyBBJNL5K1OS/fZDlP3dDvNBS7yGU="
+          "Value": "sha256-4/A3j4VeB2xGruw05i9Cjouqw87NTQBX463ueJHnVKw="
         }
       ]
     },
@@ -28360,7 +28360,168 @@
       ]
     },
     {
-      "Route": "_framework/PassGuard.Shared.hwd46m2hsh.wasm",
+      "Route": "_framework/PassGuard.Shared.efj3yzk8kh.pdb",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "efj3yzk8kh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Shared.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/PassGuard.Shared.efj3yzk8kh.pdb",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000099561928"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10043"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "efj3yzk8kh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Shared.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/PassGuard.Shared.efj3yzk8kh.pdb.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "efj3yzk8kh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Shared.pdb.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/PassGuard.Shared.nuy86mfk2o.wasm",
       "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.wasm",
       "Selectors": [],
       "ResponseHeaders": [
@@ -28374,7 +28535,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14613"
+          "Value": "19733"
         },
         {
           "Name": "Content-Type",
@@ -28382,21 +28543,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=\""
+          "Value": "\"bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hwd46m2hsh"
+          "Value": "nuy86mfk2o"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg="
+          "Value": "sha256-bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc="
         },
         {
           "Name": "label",
@@ -28405,13 +28566,13 @@
       ]
     },
     {
-      "Route": "_framework/PassGuard.Shared.hwd46m2hsh.wasm",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz",
+      "Route": "_framework/PassGuard.Shared.nuy86mfk2o.wasm",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000155183116"
+          "Quality": "0.000119146908"
         }
       ],
       "ResponseHeaders": [
@@ -28429,15 +28590,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6443"
+          "Value": "8392"
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw=\""
+          "Value": "\"AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28449,17 +28610,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=\""
+          "Value": "W/\"bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hwd46m2hsh"
+          "Value": "nuy86mfk2o"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg="
+          "Value": "sha256-bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc="
         },
         {
           "Name": "label",
@@ -28468,8 +28629,8 @@
       ]
     },
     {
-      "Route": "_framework/PassGuard.Shared.hwd46m2hsh.wasm.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz",
+      "Route": "_framework/PassGuard.Shared.nuy86mfk2o.wasm.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -28486,7 +28647,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6443"
+          "Value": "8392"
         },
         {
           "Name": "Content-Type",
@@ -28494,11 +28655,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw=\""
+          "Value": "\"AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28508,11 +28669,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hwd46m2hsh"
+          "Value": "nuy86mfk2o"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw="
+          "Value": "sha256-AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI="
         },
         {
           "Name": "label",
@@ -28535,7 +28696,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16108"
+          "Value": "17660"
         },
         {
           "Name": "Content-Type",
@@ -28543,28 +28704,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=\""
+          "Value": "\"GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:51 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:03 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o="
+          "Value": "sha256-GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Shared.pdb",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000107238606"
+          "Quality": "0.000099561928"
         }
       ],
       "ResponseHeaders": [
@@ -28582,15 +28743,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9324"
+          "Value": "10043"
         },
         {
           "Name": "ETag",
-          "Value": "\"+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w=\""
+          "Value": "\"MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28602,19 +28763,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=\""
+          "Value": "W/\"GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o="
+          "Value": "sha256-GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Shared.pdb.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-efj3yzk8kh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -28631,7 +28792,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9324"
+          "Value": "10043"
         },
         {
           "Name": "Content-Type",
@@ -28639,11 +28800,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w=\""
+          "Value": "\"MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28653,7 +28814,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w="
+          "Value": "sha256-MTSWFXr7Y97R1Cz7qf/cNy728Mi/1FXbvoFC6aFYs94="
         }
       ]
     },
@@ -28672,7 +28833,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14613"
+          "Value": "19733"
         },
         {
           "Name": "Content-Type",
@@ -28680,28 +28841,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=\""
+          "Value": "\"bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg="
+          "Value": "sha256-bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Shared.wasm",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000155183116"
+          "Quality": "0.000119146908"
         }
       ],
       "ResponseHeaders": [
@@ -28719,15 +28880,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6443"
+          "Value": "8392"
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw=\""
+          "Value": "\"AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28739,19 +28900,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=\""
+          "Value": "W/\"bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg="
+          "Value": "sha256-bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Shared.wasm.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-hwd46m2hsh.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\b5i0s4h7ra-nuy86mfk2o.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -28768,7 +28929,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6443"
+          "Value": "8392"
         },
         {
           "Name": "Content-Type",
@@ -28776,11 +28937,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw=\""
+          "Value": "\"AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -28790,334 +28951,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+9gAFMvlWd/FK2x1RH6w1GIkhAJ3MPSmjQykWf0ScRw="
+          "Value": "sha256-AoAvSAKWiLSzCgDS5hIx3n7Vzi1XR6dChp0IxjN3yOI="
         }
       ]
     },
     {
-      "Route": "_framework/PassGuard.Shared.yg8jlb04cq.pdb",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Shared.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16108"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:51 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yg8jlb04cq"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Shared.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Shared.yg8jlb04cq.pdb",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000107238606"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9324"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yg8jlb04cq"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Shared.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Shared.yg8jlb04cq.pdb.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\nfxms4vx7b-yg8jlb04cq.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9324"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 21:16:54 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yg8jlb04cq"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+TJ4cV6ILzFsA8v0ZFCv/mZzy9EGtb0eAiJnt2U5l2w="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Shared.pdb.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Web.Client.fpuu2jsmhw.wasm",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "44309"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:22 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fpuu2jsmhw"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Web.Client.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Web.Client.fpuu2jsmhw.wasm",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000055349532"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "18066"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fpuu2jsmhw"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Web.Client.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Web.Client.fpuu2jsmhw.wasm.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "18066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fpuu2jsmhw"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/PassGuard.Web.Client.wasm.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/PassGuard.Web.Client.gubh7bcmv0.pdb",
+      "Route": "_framework/PassGuard.Web.Client.7fbn3hncz6.pdb",
       "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -29131,7 +28970,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36192"
+          "Value": "41936"
         },
         {
           "Name": "Content-Type",
@@ -29139,21 +28978,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg=\""
+          "Value": "\"bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:22 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gubh7bcmv0"
+          "Value": "7fbn3hncz6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg="
+          "Value": "sha256-bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k="
         },
         {
           "Name": "label",
@@ -29162,13 +29001,13 @@
       ]
     },
     {
-      "Route": "_framework/PassGuard.Web.Client.gubh7bcmv0.pdb",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz",
+      "Route": "_framework/PassGuard.Web.Client.7fbn3hncz6.pdb",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000037065866"
+          "Quality": "0.000031261723"
         }
       ],
       "ResponseHeaders": [
@@ -29186,15 +29025,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26978"
+          "Value": "31987"
         },
         {
           "Name": "ETag",
-          "Value": "\"aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w=\""
+          "Value": "\"Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29206,17 +29045,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg=\""
+          "Value": "W/\"bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gubh7bcmv0"
+          "Value": "7fbn3hncz6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg="
+          "Value": "sha256-bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k="
         },
         {
           "Name": "label",
@@ -29225,8 +29064,8 @@
       ]
     },
     {
-      "Route": "_framework/PassGuard.Web.Client.gubh7bcmv0.pdb.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz",
+      "Route": "_framework/PassGuard.Web.Client.7fbn3hncz6.pdb.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -29243,7 +29082,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26978"
+          "Value": "31987"
         },
         {
           "Name": "Content-Type",
@@ -29251,11 +29090,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w=\""
+          "Value": "\"Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29265,11 +29104,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gubh7bcmv0"
+          "Value": "7fbn3hncz6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w="
+          "Value": "sha256-Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM="
         },
         {
           "Name": "label",
@@ -29278,6 +29117,167 @@
       ]
     },
     {
+      "Route": "_framework/PassGuard.Web.Client.afbggd02ec.wasm",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "afbggd02ec"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Web.Client.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/PassGuard.Web.Client.afbggd02ec.wasm",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000049360778"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20258"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "afbggd02ec"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Web.Client.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/PassGuard.Web.Client.afbggd02ec.wasm.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20258"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "afbggd02ec"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/PassGuard.Web.Client.wasm.gz"
+        }
+      ]
+    },
+    {
       "Route": "_framework/PassGuard.Web.Client.pdb",
       "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\PassGuard.Web.Client.pdb",
       "Selectors": [],
@@ -29292,7 +29292,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36192"
+          "Value": "41936"
         },
         {
           "Name": "Content-Type",
@@ -29300,28 +29300,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg=\""
+          "Value": "\"bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:22 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg="
+          "Value": "sha256-bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Web.Client.pdb",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000037065866"
+          "Quality": "0.000031261723"
         }
       ],
       "ResponseHeaders": [
@@ -29339,15 +29339,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26978"
+          "Value": "31987"
         },
         {
           "Name": "ETag",
-          "Value": "\"aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w=\""
+          "Value": "\"Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29359,19 +29359,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg=\""
+          "Value": "W/\"bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg="
+          "Value": "sha256-bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Web.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-gubh7bcmv0.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\1jnqd0spd7-7fbn3hncz6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -29388,7 +29388,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26978"
+          "Value": "31987"
         },
         {
           "Name": "Content-Type",
@@ -29396,11 +29396,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w=\""
+          "Value": "\"Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29410,7 +29410,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aXfTN9QDjyMbsDpsgJ8eXalAT+rcJV9nzXAFY9git4w="
+          "Value": "sha256-Ux8lOq8yMm7giyUgn7pzVcW2q1n+x9WvbUMcVzKF0EM="
         }
       ]
     },
@@ -29429,7 +29429,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "44309"
+          "Value": "50453"
         },
         {
           "Name": "Content-Type",
@@ -29437,28 +29437,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo=\""
+          "Value": "\"1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:22 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo="
+          "Value": "sha256-1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Web.Client.wasm",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000055349532"
+          "Quality": "0.000049360778"
         }
       ],
       "ResponseHeaders": [
@@ -29476,15 +29476,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18066"
+          "Value": "20258"
         },
         {
           "Name": "ETag",
-          "Value": "\"+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18=\""
+          "Value": "\"oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29496,19 +29496,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo=\""
+          "Value": "W/\"1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo="
+          "Value": "sha256-1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE="
         }
       ]
     },
     {
       "Route": "_framework/PassGuard.Web.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-fpuu2jsmhw.gz",
+      "AssetFile": "C:\\Users\\bapti\\RiderProjects\\Pass\\PassGuard\\PassGuard.Web\\PassGuard.Web.Client\\obj\\Debug\\net9.0\\compressed\\ogho2wbe6j-afbggd02ec.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -29525,7 +29525,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18066"
+          "Value": "20258"
         },
         {
           "Name": "Content-Type",
@@ -29533,11 +29533,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18=\""
+          "Value": "\"oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 15:07:23 GMT"
+          "Value": "Sat, 22 Feb 2025 23:44:06 GMT"
         },
         {
           "Name": "Vary",
@@ -29547,7 +29547,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+wZb958L3KcAmHVQ2wOKrwOMu2KPyAlYsA3aioWoh18="
+          "Value": "sha256-oOCay9USMhd5MeHfwQdcY+/IWn1DwyyuJLRxpkCEAek="
         }
       ]
     },

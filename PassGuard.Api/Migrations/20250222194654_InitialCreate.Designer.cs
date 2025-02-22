@@ -11,8 +11,8 @@ using PassGuard.Api.Database;
 namespace PassGuard.Api.Migrations
 {
     [DbContext(typeof(SqliteDbContext))]
-    [Migration("20250216194608_InitialSqliteMigration")]
-    partial class InitialSqliteMigration
+    [Migration("20250222194654_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

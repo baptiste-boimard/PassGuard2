@@ -3,10 +3,15 @@
 @using PassGuard.Shared.Models
 @using PassGuard.Shared.State
 @inject PasswordState PasswordState
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 
-<h3>EnterData</h3>
 
-<MudGrid>
+@rendermode InteractiveWebAssembly
+
+<MudText 
+    Typo="Typo.h5"
+    Style="margin-bottom: 1rem !important;">Ajouter un nouvel enregistrement</MudText>
+<MudGrid Style="margin-bottom: 4rem">
     <MudItem xs="12" sm="7">
         <MudPaper Class="pa-4">
             @if (errorConflict)
@@ -29,41 +34,44 @@
                             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
                             max-width: 400px; width: 100%">Vous mot passe a été ajouté avec succés !!</MudAlert>
             }
-            
-            <MudForm @ref="_form" @bind-IsValid="@_success">
-                <MudTextField T="string"
-                              Label="Site"
-                              Required="true"
-                              RequiredError="Le site est nécessaire !"
-                              @bind-Value="@_objectPassword.Site"/>
-                <MudTextField T="string"
-                              Label="Nom Utilisateur"
-                              Required="true"
-                              RequiredError="Le nom d'utilisateur est nécessaire !"
-                              @bind-Value="@_objectPassword.Username"/>
-                <MudTextField T="string"
-                              Label="Mot de passe"
-                              Required="true"
-                              RequiredError="Le mot de passe est nécessaire !"
-                              InputType="InputType.Password"
-                              @bind-Value="@_objectPassword.Password"/>
+            <div style="display: flex; gap: 1rem; align-items: center">
+                <MudForm @ref="_form" @bind-IsValid="@_success">
+                    <div style="display: flex; gap: 1rem; align-items: flex-start">
+                        <MudTextField T="string"
+                                      Label="Site"
+                                      Required="true"
+                                      RequiredError="Le site est nécessaire !"
+                                      @bind-Value="@_objectPassword.Site"/>
+                        <MudTextField T="string"
+                                      Label="Nom Utilisateur"
+                                      Required="true"
+                                      RequiredError="Le nom d'utilisateur est nécessaire !"
+                                      @bind-Value="@_objectPassword.Username"/>
+                        <MudTextField T="string"
+                                      Label="Mot de passe"
+                                      Required="true"
+                                      RequiredError="Le mot de passe est nécessaire !"
+                                      InputType="InputType.Password"
+                                      @bind-Value="@_objectPassword.Password"/>
 
-                <MudTextField T="string"
-                              Label="Catégorie"
-                              Required="true"
-                              RequiredError="La catégorie est nécessaire !"
-                              @bind-Value="@_objectPassword.Category"/>
-            </MudForm>
-        </MudPaper>
-        <MudPaper Class="pa-4 mt-4">
-            <MudButton Variant="Variant.Filled" 
-                       Color="Color.Info"
-                       DropShadow="false"
-                       OnClick="@(() =>
+                        <MudTextField T="string"
+                                      Label="Catégorie"
+                                      Required="true"
+                                      RequiredError="La catégorie est nécessaire !"
+                                      @bind-Value="@_objectPassword.Category"/>
+                    </div>
+                </MudForm>
+                <MudButton Style="margin-top: 1rem"
+                           Variant="Variant.Filled"
+                           Color="Color.Info"
+                           DropShadow="false"
+                           OnClick="@(() =>
                                 {
                                     _form?.Validate();
                                     SubmitForm();
-                                })">Ajouter</MudButton>
+                                })"
+                >Ajouter</MudButton>
+            </div>
         </MudPaper>
     </MudItem>
 </MudGrid>
@@ -75,29 +83,27 @@
     MudForm? _form;
     private bool errorConflict = false;
     private bool addedPasswordOk = false;
+    private string? token;
 
-    ObjectPassword _objectPassword = new ObjectPassword();
+    ObjectPasswordForm _objectPassword = new ObjectPasswordForm();
 
     private async Task SubmitForm()
     {
-        var content = JsonContent.Create(_objectPassword);
+        token = await LocalStorage.GetItemAsync<string>("token");
 
-        var response = await HttpClient.PostAsync("https://localhost:7012/api/password/postpassword", content);
+        var result = await PasswordState.CreatePassword(token, _objectPassword);
 
-        if (response.IsSuccessStatusCode)
+        if (result)
         {
-            await PasswordState.GetPasswordArray();
-            _objectPassword = new ObjectPassword();
+            _objectPassword = new ObjectPasswordForm();
             addedPasswordOk = true;
             StateHasChanged();       
         }
-
-        if (response.StatusCode == HttpStatusCode.Conflict)
+        else
         {
             errorConflict = true;
             StateHasChanged();
         }
-        
     }
 
     private void CloseErrorConflict()

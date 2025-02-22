@@ -49,6 +49,9 @@ namespace PassGuard.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -57,10 +60,6 @@ namespace PassGuard.Api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Salt")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -74,7 +73,25 @@ namespace PassGuard.Api.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AccountId");
+
                     b.ToTable("ObjectPasswords");
+                });
+
+            modelBuilder.Entity("PassGuard.Shared.Models.ObjectPassword", b =>
+                {
+                    b.HasOne("PassGuard.Shared.Models.Account", "Account")
+                        .WithMany("ObjectPasswords")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("PassGuard.Shared.Models.Account", b =>
+                {
+                    b.Navigation("ObjectPasswords");
                 });
 #pragma warning restore 612, 618
         }

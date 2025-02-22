@@ -8,6 +8,7 @@ builder.Services.AddMudServices();
 builder.Services.AddBlazoredLocalStorage();
 
 builder.Services.AddScoped<PasswordState>();
+builder.Services.AddScoped<UserState>();
 
 builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri("https://localhost:7012") });
 

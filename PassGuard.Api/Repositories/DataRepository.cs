@@ -1,6 +1,8 @@
 ﻿using System.Data;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using PassGuard.Api.Database;
 using PassGuard.Api.Service;
 using PassGuard.Shared.DTO;
@@ -35,20 +37,27 @@ public class DataRepository
         return null;
     }
 
-    public async Task<ObjectPasswordDTO> SaveNewObjectPassword(ObjectPasswordForm objectPassword)
+    public async Task<ObjectPasswordDTO> SaveNewObjectPassword(CreatePassword objectPassword)
     {
-        var cryptedPass = AESService.EncryptString(objectPassword.Password);
-        
+        var cryptedPass = AESService.EncryptString(objectPassword.ObjectPasswordForm.Password);
+
+        var unhashedToken = new JwtSecurityTokenHandler().ReadJwtToken(objectPassword.Token);
+        var subClaim = unhashedToken.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub);
+
+        if (subClaim == null) return null;
+
+        if (!Guid.TryParse(subClaim.Value, out Guid userId)) return null;
+
         //Création du nouveau ObjectPassword
         var newObjectPassword = new ObjectPassword
         {
             Id = Guid.NewGuid(),
-            Site = objectPassword.Site,
-            Username = objectPassword.Username,
+            Site = objectPassword.ObjectPasswordForm.Site,
+            Username = objectPassword.ObjectPasswordForm.Username,
             Password = cryptedPass,
-            Category = objectPassword.Category,
-            Salt = cryptedPass,
-            CreatedAt = DateTime.UtcNow
+            Category = objectPassword.ObjectPasswordForm.Category,
+            CreatedAt = DateTime.UtcNow,
+            AccountId = userId
         };
 
         _sqliteDbContext.ObjectPasswords.Add(newObjectPassword);
@@ -61,15 +70,29 @@ public class DataRepository
             Username = newObjectPassword.Username,
             Password = newObjectPassword.Password,
             Category = newObjectPassword.Category,
-            CreatedAt = newObjectPassword.CreatedAt
+            CreatedAt = newObjectPassword.CreatedAt,
+            AccountId = newObjectPassword.AccountId
         };
 
         return newObjectPasswordDTO;
     }
 
-    public async Task<ObjectPassword[]> GetPasswords()
+    public async Task<ObjectPassword[]> GetPasswords(string token)
     {
-        ObjectPassword[] passwordArray = _sqliteDbContext.ObjectPasswords.ToArray();
+        // Décodage du token
+        var unhashedToken = new JwtSecurityTokenHandler().ReadJwtToken(token);
+        var subClaim = unhashedToken.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub);
+
+        if (subClaim == null || string.IsNullOrWhiteSpace(subClaim.Value)) return Array.Empty<ObjectPassword>();
+        
+        if (!Guid.TryParse(subClaim.Value, out Guid userId))
+        {
+            return Array.Empty<ObjectPassword>();
+        }
+
+        var passwordArray = await _sqliteDbContext.ObjectPasswords
+            .Where(o => o.AccountId == userId)
+            .ToArrayAsync();
 
         if (passwordArray == null)
         {
@@ -79,7 +102,7 @@ public class DataRepository
         return passwordArray;
     }
 
-    public async Task<ObjectPassword> PatchPassword(Guid id, ObjectPassword objectPassword)
+    public async Task<ObjectPassword> PatchPassword(Guid id, UpdatePassword objectPassword)
     {
         var modifiedPassword = await _sqliteDbContext.ObjectPasswords.FindAsync(id);
 

@@ -18,7 +18,10 @@ public class ObjectPassword
     [Required]
     public string Category { get; set; }
     
-    public string Salt { get; set; }
-    
     public DateTime CreatedAt { get; set; }
+    
+    public Guid AccountId { get; set; }
+    
+    public Account Account { get; set; }
+    
 }

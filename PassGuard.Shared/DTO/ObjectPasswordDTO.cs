@@ -1,4 +1,6 @@
-﻿namespace PassGuard.Shared.DTO;
+﻿using PassGuard.Shared.Models;
+
+namespace PassGuard.Shared.DTO;
 
 public class ObjectPasswordDTO
 {
@@ -8,4 +10,5 @@ public class ObjectPasswordDTO
     public string Password { get; set; } 
     public string Category { get; set; }
     public DateTime CreatedAt { get; set; }
+    public Guid AccountId { get; set; }
 }

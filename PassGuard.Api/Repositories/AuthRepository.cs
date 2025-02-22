@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using PassGuard.Api.Database;
 using PassGuard.Api.Service;
@@ -154,5 +155,16 @@ public class AuthRepository
         }
         
         return null;
+    }
+
+    public async Task<string> GetEmail(string token)
+    {
+        var unhashedToken = new JwtSecurityTokenHandler().ReadJwtToken(token);
+        
+        var subClaim = unhashedToken.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.UniqueName);
+        
+        if (subClaim == null) return null;
+        
+        return subClaim.Value;
     }
 }

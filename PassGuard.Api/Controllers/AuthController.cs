@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using PassGuard.Api.Repositories;
 using PassGuard.Shared.Models;
 using static PassGuard.Api.Service.JwtService;
@@ -61,6 +62,20 @@ public class AuthController : ControllerBase
         if (DecryptedPassword != null)
         {
             return Ok(DecryptedPassword);
+        }
+
+        return Unauthorized(new { message = "Vous n'êtes pas un utilisateur reconnu" });
+    }
+    
+    [HttpPost]
+    [Route("getemail")]
+    public async Task<IActionResult> GetEmail([FromBody] string token)
+    {
+        var email = await _authRepository.GetEmail(token);
+
+        if (email != null)
+        {
+            return Ok(email);
         }
 
         return Unauthorized(new { message = "Vous n'êtes pas un utilisateur reconnu" });

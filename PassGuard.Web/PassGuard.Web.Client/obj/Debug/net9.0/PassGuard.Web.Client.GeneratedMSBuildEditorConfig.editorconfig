@@ -31,6 +31,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXEVudGVyRGF0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/GenerateKey.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXEdlbmVyYXRlS2V5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/Menu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXE1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/bapti/RiderProjects/Pass/PassGuard/PassGuard.Web/PassGuard.Web.Client/Components/Data/PasswordConfirm.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhXFBhc3N3b3JkQ29uZmlybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

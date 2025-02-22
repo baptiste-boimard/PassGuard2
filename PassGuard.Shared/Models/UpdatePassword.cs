@@ -2,9 +2,12 @@
 
 namespace PassGuard.Shared.Models;
 
-public class Account
+public class UpdatePassword
 {
     public Guid Id { get; set; }
+    
+    [Required]
+    public string Site { get; set; }
     
     [Required]
     public string Username { get; set; }
@@ -13,10 +16,7 @@ public class Account
     public string Password { get; set; }
     
     [Required]
-    public string Salt { get; set; }
+    public string Category { get; set; }
     
     public DateTime CreatedAt { get; set; }
-
-    public ICollection<ObjectPassword> ObjectPasswords { get; set; } = new List<ObjectPassword>();
-
 }

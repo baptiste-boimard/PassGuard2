@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PassGuard.Web.Client",
   "resources": {
-    "hash": "sha256-5PaLU+5TzrzPUv0mj4bXMfNJqwl80nd5cLlJTJFwJTk=",
+    "hash": "sha256-b2srK3awA/g/1AC8c5ZMd5NSkbugJYTTwqVNI5RE72s=",
     "fingerprinting": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "Blazored.LocalStorage.wasm",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -218,10 +218,10 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "PassGuard.Shared.hwd46m2hsh.wasm": "PassGuard.Shared.wasm",
-      "PassGuard.Shared.yg8jlb04cq.pdb": "PassGuard.Shared.pdb",
-      "PassGuard.Web.Client.fpuu2jsmhw.wasm": "PassGuard.Web.Client.wasm",
-      "PassGuard.Web.Client.gubh7bcmv0.pdb": "PassGuard.Web.Client.pdb"
+      "PassGuard.Shared.nuy86mfk2o.wasm": "PassGuard.Shared.wasm",
+      "PassGuard.Shared.efj3yzk8kh.pdb": "PassGuard.Shared.pdb",
+      "PassGuard.Web.Client.afbggd02ec.wasm": "PassGuard.Web.Client.wasm",
+      "PassGuard.Web.Client.7fbn3hncz6.pdb": "PassGuard.Web.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.8bti36lthm.js": "sha256-HFADmT26AarHu4tMjFaTPxINmQjBJGtdPN+CKjtNMFE="
@@ -448,12 +448,12 @@
       "WindowsBase.tuf34ieu7y.wasm": "sha256-Bd+l972cOS1eVeLzrQNlgD6LPWV1QXBSzJhv8Tx1WGI=",
       "mscorlib.5q5u0swn6q.wasm": "sha256-g9cI1sECkF7bxMqOSB+W0a4utdDsqTrqZzyiAEeA65g=",
       "netstandard.w8gk1pigg1.wasm": "sha256-QFR5QNPfvyZTexW3IA/AFx6ZmIF/TecvOUsSK4gM4po=",
-      "PassGuard.Shared.hwd46m2hsh.wasm": "sha256-YV3nMDj0ScYJSOAP3OoBqLS5wDKVrvv9X4pMQx2lkgg=",
-      "PassGuard.Web.Client.fpuu2jsmhw.wasm": "sha256-86Sz4D3ny5Vea8ZfE2N2f0d269pJWXmySaFUE9wbtpo="
+      "PassGuard.Shared.nuy86mfk2o.wasm": "sha256-bzBr9DRf/udgwA6g+tvWoQllcdPwachR/vxlV9tlajc=",
+      "PassGuard.Web.Client.afbggd02ec.wasm": "sha256-1oHK3EHcIFUoAwQYiilepyfvXQuDip1BudwYhAzZ7TE="
     },
     "pdb": {
-      "PassGuard.Shared.yg8jlb04cq.pdb": "sha256-Xg3W6gkJmTSbVF2Q3iCXfH9p8rBfn/5UqVOGm60fM7o=",
-      "PassGuard.Web.Client.gubh7bcmv0.pdb": "sha256-OAnCcOYdouoZNlamwmyF+OHAQrQT2K9cVIZw8XAofYg="
+      "PassGuard.Shared.efj3yzk8kh.pdb": "sha256-GpMF4PcAddg3cqU9GDyh0JXNfclF21YkPbsBcz85zWE=",
+      "PassGuard.Web.Client.7fbn3hncz6.pdb": "sha256-bS8dpr68LWeVgJne+QnE15x6piLk1PcxR5sr05XC/+k="
     }
   },
   "cacheBootResources": true,

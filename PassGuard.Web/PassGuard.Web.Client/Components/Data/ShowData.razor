@@ -10,14 +10,21 @@
 
 <MudDialogProvider />
 
-<MudTable Items="@FilteredPasswordArray" Dense=true Hover=true Bordered=true Striped=true>
+<MudText Typo="Typo.h5">Liste de vos mots de passe</MudText>
+<MudText Typo="Typo.h6" Style="font-size: 0.8rem">Double cliquez sur une ligne pour l'éditer</MudText>
+
+<MudTable Items="@FilteredPasswordArray" Dense=true Hover=true Bordered=true Striped=true Style="margin-top: 0.8rem">
     <ToolBarContent>
-        <MudText Typo="Typo.h6">Liste de vos mots de passe</MudText>
         <MudSpacer />
-        <MudTextField @bind-Value="searchString1" Placeholder="Recherche" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
-    </ToolBarContent>
-    <ToolBarContent>
-        <MudText Typo="Typo.h6" Style="font-size: 0.8rem">Double cliquez sur une ligne pour l'éditer</MudText>
+        <MudTextField
+            @bind-Value="searchString1"
+            Placeholder="Recherche"
+            Adornment="Adornment.Start"
+            AdornmentIcon="@Icons.Material.Filled.Search"
+            IconSize="Size.Medium"
+            Class="mt-0"
+            Style="margin-top: 0.8rem">
+        </MudTextField>
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Site</MudTh>
@@ -39,9 +46,17 @@
                     style="background-color: rgba(166,166,166,0.75); width: 30rem; min-width: 30rem">
                 <div style="display: flex; align-items: center">
                     <span>
-                        <MudTextField T="string" @bind-Value="editingItem.Password"
-                                      InputType="@(IsPasswordVisible(context.Id) ? InputType.Text : InputType.Password)"
-                                      />
+                        @if (IsPasswordVisible(context.Id))
+                        {
+                            <MudTextField T="string" @bind-Value="editingItem.Password"
+                                          InputType="InputType.Text" />
+                        }
+                        else
+                        {
+                            <MudTextField T="string" Value="@privateString" ReadOnly="true" />
+                        }
+                        @* <MudTextField T="string" @bind-Value="editingItem.Password" *@
+                        @*               InputType="@(IsPasswordVisible(context.Id) ? InputType.Text : InputType.Password)"/> *@
                     </span>
                     <MudIconButton Icon="@(IsPasswordVisible(@context.Id) ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
                                    Color="Color.Info"
@@ -128,19 +143,21 @@
     private Dictionary<Guid, bool> passwordVisibility = new Dictionary<Guid, bool>();
     private bool isLocked = false;
     private int failureCount = 0;
+    private string? token;
+    private string privateString = new string('•', 20);
+
     
     protected async override Task OnInitializedAsync()
     {
         PasswordState.OnChange += PasswordStateChanged;
-
-        _passwordArray = await PasswordState.GetPasswordArray();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            _passwordArray = await PasswordState.GetPasswordArray();
+            token = await localStorage.GetItemAsync<string>("token");
+            _passwordArray = await PasswordState.GetPasswordArray(token);
             StateHasChanged();
         }
     }
@@ -158,7 +175,7 @@
     
     private async void SaveChanges()
     {
-        await PasswordState.UpdatePasword(editingItem);
+        await PasswordState.UpdatePasword(token, editingItem);
 
         passwordVisibility[editingItem.Id] = false;
         editingItem = null;
@@ -173,7 +190,7 @@
 
     private async void DeleteEditing()
     {
-        await PasswordState.DeletePassword(editingItem);
+        await PasswordState.DeletePassword(token, editingItem);
         editingItem = null;
         StateHasChanged();
     }
@@ -250,7 +267,7 @@
         
         if (result != null)
         {
-            var enteredPassword = result.Data.ToString();
+            var enteredPassword = result.Data!.ToString();
             SubmitPassword(enteredPassword, id);
         }
     }
@@ -309,6 +326,12 @@
                 StateHasChanged();
             }
         }
+        
+    }
+    
+    private string GetMaskedPassword(Guid id)
+    {
+        return IsPasswordVisible(id) ? editingItem.Password : new string('•', 20);
     }
     
 }   

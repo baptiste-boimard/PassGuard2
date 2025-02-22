@@ -24,7 +24,6 @@ public class JwtService
             // Le claim "unique_name" pour le nom d'utilisateur
             new Claim(JwtRegisteredClaimNames.UniqueName, account.Username),
 
-            // Si vous souhaitez inclure la date de création, vous pouvez ajouter un claim personnalisé
             new Claim("CreatedAt", account.CreatedAt.ToString("o"))
         };
 
@@ -39,5 +38,13 @@ public class JwtService
         );
         
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+    
+    public static IDictionary<string, string> GetClaimsFromToken(string token)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var jwtToken = tokenHandler.ReadJwtToken(token);
+
+        return jwtToken.Claims.ToDictionary(claim => claim.Type, claim => claim.Value);
     }
 }

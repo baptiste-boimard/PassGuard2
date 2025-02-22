@@ -28,13 +28,17 @@ public class SqliteDbContext : DbContext
 
         modelBuilder.Entity<ObjectPassword>(entity =>
         {
-            entity.HasKey(a => a.Id);
-            entity.Property(a => a.Site).IsRequired();
-            entity.Property(a => a.Username).IsRequired();
-            entity.Property(a => a.Password).IsRequired();
-            entity.Property(a => a.Category).IsRequired();
-            entity.Property(a => a.Salt);
-            entity.Property(a => a.CreatedAt);
+            entity.HasKey(o => o.Id);
+            entity.Property(o => o.Site).IsRequired();
+            entity.Property(o => o.Username).IsRequired();
+            entity.Property(o => o.Password).IsRequired();
+            entity.Property(o => o.Category).IsRequired();
+            entity.Property(o => o.CreatedAt);
+
+            entity.HasOne(o => o.Account)
+                .WithMany(a => a.ObjectPasswords)
+                .HasForeignKey(o => o.AccountId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
     }
     

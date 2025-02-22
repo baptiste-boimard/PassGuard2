@@ -1,22 +1,18 @@
 ﻿@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject NavigationManager Navigation
+@inject UserState UserState
 
 @page "/pass"
+@using PassGuard.Shared.State
 @using PassGuard.Web.Client.Components.Data
+
 @rendermode InteractiveWebAssembly
 
 <PageTitle>Pass</PageTitle>
 
-<h1 class="text-muted">Render @(OperatingSystem.IsBrowser() ? "Wasm" : "Server")</h1>
-
-@* @if (_isLoading) { *@
-@*     <MudProgressCircular Color="Color.Info" Style="height:70px;width:70px;" Indeterminate="true" /> *@
-@* } *@
-@* else *@
-@* { *@
-    <EnterData />
-    <ShowData />
-@* } *@
+<Menu />
+<EnterData />
+<ShowData />
 
 @code {
     string? _token;
@@ -31,6 +27,7 @@
             if (_token != null)
             {
                 _isLoading = false;
+                UserState.GetEmail(_token);
                 StateHasChanged();
             }
             else

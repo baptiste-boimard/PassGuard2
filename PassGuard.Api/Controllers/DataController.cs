@@ -18,25 +18,26 @@ public class DataController : ControllerBase
 
     [HttpPost]
     [Route("postpassword")]
-    public async Task<IActionResult> PostPassword([FromBody] ObjectPasswordForm objectPasswordForm)
+    public async Task<IActionResult> PostPassword([FromBody] CreatePassword createPassword)
     {
-        var existingOne = await _dataRepository.VerifyExistingOne(objectPasswordForm);
+        
+        var existingOne = await _dataRepository.VerifyExistingOne(createPassword!.ObjectPasswordForm);
 
         if (existingOne != null)
         {
             return Conflict(new { message = "Cet utilisateur pour ce site existe déjà !" });
         }
 
-        var newObjectPasswordDTO = await _dataRepository.SaveNewObjectPassword(objectPasswordForm);
+        var newObjectPasswordDTO = await _dataRepository.SaveNewObjectPassword(createPassword);
 
         return Ok(newObjectPasswordDTO);
     }
 
-    [HttpGet]
+    [HttpPost]
     [Route("getpassword")]
-    public async Task<IActionResult> GetPassword()
+    public async Task<IActionResult> GetPassword([FromBody] string token)
     {
-        var passwordArray = await _dataRepository.GetPasswords();
+        var passwordArray = await _dataRepository.GetPasswords(token);
 
         if (passwordArray == null)
         {
@@ -48,7 +49,7 @@ public class DataController : ControllerBase
 
     [HttpPatch]
     [Route("patchpassword")]
-    public async Task<IActionResult> PatchPassword([FromBody] ObjectPassword objectPassword)
+    public async Task<IActionResult> PatchPassword([FromBody] UpdatePassword objectPassword)
     {
         var modifiedPassword = await _dataRepository.PatchPassword(objectPassword.Id, objectPassword);
 
