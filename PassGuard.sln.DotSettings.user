@@ -9,6 +9,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AFSharpCoreReflectionProxy_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F74e6dceae40f3123c8fc6d1fb41fb1f5bd4eb9214623f4ab4943efe5fc52ad9_003FFSharpCoreReflectionProxy_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AFSharpTypeConverterFactory_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Ff5b0593df95acacf3652937716a4f2a2135151dd5a2ce4d133d4a43608c32af_003FFSharpTypeConverterFactory_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AGuid_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F14295caa5335b4c0437184fea98d619bcae7fec2b39e6986204bb1c585a352_003FGuid_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AHttpResponseMessage_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F4cfeb8b377bc81e1fbb5f7d7a02492cb6ac23e88c8c9d7155944f0716f3d4b_003FHttpResponseMessage_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARazorPagesEndpointRouteBuilderExtensions_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F1e66cead6749dd97b23727b34899c1d6eb5de06e73875ba3a46fc44fa238_003FRazorPagesEndpointRouteBuilderExtensions_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARuntimeCustomAttributeData_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F4dd249490dd16dc9fdab9ff2c4817d782026e41cfa4d62dc8f0d4216a58_003FRuntimeCustomAttributeData_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -24,13 +25,29 @@
     &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.LoginRepositotyTest.Login_Returns_AccountDTO_When_Credentials_Are_Correct&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d5bafe8_002Df673_002D4146_002D871a_002D125f249f7de3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="LoginRepositotyTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d5bafe8_002Df673_002D4146_002D871a_002D125f249f7de3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LoginRepositotyTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.LoginRepositotyTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest.GetPasswords_Returns_ObjectPassword_Array_With_Good_Token&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ca8c999_002D02e5_002D467a_002Db878_002D8ace638f9d13/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetPasswords_Returns_ObjectPassword_Array_Empty_With_Bad_Token" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85dc6151_002D12b0_002D4eb8_002Dbd75_002D7ca243705e6b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Login_Returns_AccountDTO_When_Credentials_Are_Correct #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.LoginRepositotyTest.Login_Returns_AccountDTO_When_Credentials_Are_Correct&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b8ccf1e0_002D96f6_002D4035_002D80a3_002D1ba097934311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPasswords_Returns_ObjectPassword_Array_With_Good_Token" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest.GetPasswords_Returns_ObjectPassword_Array_With_Good_Token&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest.GetPasswords_Returns_ObjectPassword_Array_Empty_With_Bad_Token&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=efa84766_002D9fbc_002D4346_002D8485_002Dab2e3478f7ef/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPasswords_Returns_No_ObjectPassword_Array_With_Bad_AccountId" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest.GetPasswords_Returns_No_ObjectPassword_Array_With_Bad_AccountId&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -5,16 +5,15 @@ using PassGuard.Api.Database;
 using PassGuard.Api.Repositories;
 using PassGuard.Api.Service;
 using PassGuard.Shared.Models;
-using Tests.MockService;
 
 namespace Tests;
 
-public class LoginRepositotyTest
+public class LoginAuthRepositotyTest
 {
     private readonly AuthRepository _testAuthRepository;
     private readonly SqliteDbContext _sqliteDbContext;
     
-    public LoginRepositotyTest()
+    public LoginAuthRepositotyTest()
     {
         var options = new DbContextOptionsBuilder<SqliteDbContext>()
             .UseInMemoryDatabase("TestDb")
@@ -29,7 +28,6 @@ public class LoginRepositotyTest
     public async Task Login_Returns_AccountDTO_When_Credentials_Are_Correct()
     {
         // ! Arrange
-        
         // * Mock de la valeur d'entrée
         LoginAccountForm testLoginAccountForm = new LoginAccountForm
         {
@@ -63,9 +61,8 @@ public class LoginRepositotyTest
         var result = await _testAuthRepository.Login(testLoginAccountForm);
         
         // ! Assert
-
         Assert.NotNull(result);
-        Assert.NotNull(result.CreatedAt);
+        Assert.Equal(testAccount.CreatedAt, result.CreatedAt);
         Assert.IsType<Guid>(result.Id);
         Assert.Equal("testuser", result.Username);
 
@@ -75,7 +72,6 @@ public class LoginRepositotyTest
     public async Task Login_Entry_LoginAccountForm_Is_Not_In_BDD()
     {
         // ! Arrange
-        
         // * Mock de la valeur d'entrée
         LoginAccountForm testLoginAccountForm = new LoginAccountForm
         {
@@ -87,7 +83,6 @@ public class LoginRepositotyTest
         var result = await _testAuthRepository.Login(testLoginAccountForm);
         
         // ! Assert
-
         Assert.Null(result);
     }
     
@@ -95,7 +90,6 @@ public class LoginRepositotyTest
     public async Task Password_Entry_LoginAccountForm_Is_Not_Correct()
     {
         // ! Arrange
-        
         // * Mock de la valeur d'entrée
         LoginAccountForm testLoginAccountForm = new LoginAccountForm
         {
@@ -123,11 +117,11 @@ public class LoginRepositotyTest
 
         _sqliteDbContext.Accounts.Add(testAccount);
         await _sqliteDbContext.SaveChangesAsync();
+        
         // ! Act
         var result = await _testAuthRepository.Login(testLoginAccountForm);
         
         // ! Assert
-
         Assert.Null(result);
     }
 }

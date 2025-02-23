@@ -94,7 +94,7 @@ public class DataRepository
             .Where(o => o.AccountId == userId)
             .ToArrayAsync();
 
-        if (passwordArray == null)
+        if (passwordArray.Length == 0)
         {
             return null;
         }

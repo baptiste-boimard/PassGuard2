@@ -10,7 +10,7 @@ namespace PassGuard.Api.Service;
 
 public class JwtService
 {
-    public static  string JwtCreateToken(AccountDTO account)
+    public static string JwtCreateToken(AccountDTO account)
     {
         // Récupération des keys pour le jwt
         var jwtKey = LoadJwtKey();

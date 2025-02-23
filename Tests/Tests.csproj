@@ -25,4 +25,8 @@
       <ProjectReference Include="..\PassGuard.Shared\PassGuard.Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="MockService\" />
+    </ItemGroup>
+
 </Project>
