@@ -1,6 +1,4 @@
-﻿@inject HttpClient HttpClient
-@using System.Net
-@using PassGuard.Shared.Models
+﻿@using PassGuard.Shared.Models
 @using PassGuard.Shared.State
 @inject PasswordState PasswordState
 @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
@@ -38,16 +36,19 @@
                 <MudForm @ref="_form" @bind-IsValid="@_success">
                     <div style="display: flex; gap: 1rem; align-items: flex-start">
                         <MudTextField T="string"
+                                      data-testid="site-input"
                                       Label="Site"
                                       Required="true"
                                       RequiredError="Le site est nécessaire !"
                                       @bind-Value="@_objectPassword.Site"/>
                         <MudTextField T="string"
+                                      data-testid="username-input"
                                       Label="Nom Utilisateur"
                                       Required="true"
                                       RequiredError="Le nom d'utilisateur est nécessaire !"
                                       @bind-Value="@_objectPassword.Username"/>
                         <MudTextField T="string"
+                                      data-testid="password-input"
                                       Label="Mot de passe"
                                       Required="true"
                                       RequiredError="Le mot de passe est nécessaire !"
@@ -55,6 +56,7 @@
                                       @bind-Value="@_objectPassword.Password"/>
 
                         <MudTextField T="string"
+                                      data-testid="category-input"
                                       Label="Catégorie"
                                       Required="true"
                                       RequiredError="La catégorie est nécessaire !"
@@ -62,6 +64,7 @@
                     </div>
                 </MudForm>
                 <MudButton Style="margin-top: 1rem"
+                           data-testid="add-button"
                            Variant="Variant.Filled"
                            Color="Color.Info"
                            DropShadow="false"

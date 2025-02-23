@@ -24,7 +24,7 @@ public class JwtService
             // Le claim "unique_name" pour le nom d'utilisateur
             new Claim(JwtRegisteredClaimNames.UniqueName, account.Username),
 
-            new Claim("CreatedAt", account.CreatedAt.ToString("o"))
+            new Claim("CreatedAt", account.CreatedAt.ToString())
         };
 
         var token = new JwtSecurityToken(

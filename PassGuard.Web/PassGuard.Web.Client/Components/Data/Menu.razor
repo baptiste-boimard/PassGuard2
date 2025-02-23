@@ -28,13 +28,16 @@
             Color="Color.Info"
             OnClick="@(() => Logout())">Se déconnecter</MudButton>
         
-        <MudButton 
+        <MudButton
+            data-testid="generate-button"
             Color="Color.Info"
             Variant="Variant.Filled"
             Style="margin-left: 4rem !important;"
             OnClick="@(() => GenerateCode())">Générer un mot de passe  =></MudButton>
         
-        <MudText Style="margin-left: 1rem !important;">
+        <MudText 
+            data-testid="generated-text"
+            Style="margin-left: 1rem !important;">
             @generateCode
         </MudText>
         

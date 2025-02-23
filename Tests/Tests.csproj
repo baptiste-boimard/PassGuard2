@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="bunit" Version="2.0.36-preview" />
         <PackageReference Include="coverlet.collector" Version="6.0.2"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
@@ -21,12 +22,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PassGuard.Api\PassGuard.Api.csproj" />
-      <ProjectReference Include="..\PassGuard.Shared\PassGuard.Shared.csproj" />
+        <None Update="xunit.runner.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="MockService\" />
+      <ProjectReference Include="..\PassGuard.Api\PassGuard.Api.csproj" />
+      <ProjectReference Include="..\PassGuard.Shared\PassGuard.Shared.csproj" />
+      <ProjectReference Include="..\PassGuard.Web\PassGuard.Web.Client\PassGuard.Web.Client.csproj" />
     </ItemGroup>
 
 </Project>

@@ -25,14 +25,18 @@
     &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.LoginRepositotyTest.Login_Returns_AccountDTO_When_Credentials_Are_Correct&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=33aba3df_002D1e66_002D40c0_002D956f_002D48a251a4893c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GenerateCode_ShouldProduceValidPassword" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\bapti\RiderProjects\Pass\PassGuard\Tests" Presentation="&amp;lt;Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d5bafe8_002Df673_002D4146_002D871a_002D125f249f7de3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LoginRepositotyTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest.GetPasswords_Returns_ObjectPassword_Array_With_Good_Token&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ca8c999_002D02e5_002D467a_002Db878_002D8ace638f9d13/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetPasswords_Returns_ObjectPassword_Array_Empty_With_Bad_Token" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ca8c999_002D02e5_002D467a_002Db878_002D8ace638f9d13/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPasswords_Returns_ObjectPassword_Array_Empty_With_Bad_Token" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.GetPasswordsDataRepositoryTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::019E4F4A-58A7-4385-85A7-E60F1F543012::net9.0::Tests.MockService.GenerateCodeButtonTest.GenerateCode_ShouldProduceValidPassword&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85dc6151_002D12b0_002D4eb8_002Dbd75_002D7ca243705e6b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Login_Returns_AccountDTO_When_Credentials_Are_Correct #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

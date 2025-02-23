@@ -89,7 +89,7 @@ public class PasswordState
         return null;
     }
 
-    public async Task<bool> CreatePassword(string? token, ObjectPasswordForm item)
+    public virtual async Task<bool> CreatePassword(string? token, ObjectPasswordForm item)
     {
         var createPassword = new CreatePassword
         {

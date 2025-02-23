@@ -15,7 +15,7 @@ public class Account
     [Required]
     public string Salt { get; set; }
     
-    public DateTime CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
     public ICollection<ObjectPassword> ObjectPasswords { get; set; } = new List<ObjectPassword>();
 

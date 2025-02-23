@@ -17,7 +17,7 @@ public class GetPasswordsDataRepositoryTest
     public GetPasswordsDataRepositoryTest()
     {
         var options = new DbContextOptionsBuilder<SqliteDbContext>()
-            .UseInMemoryDatabase("TestDb")
+            .UseInMemoryDatabase("TestDbGetPassword")
             .Options;
 
         _sqliteDbContext = new SqliteDbContext(options);

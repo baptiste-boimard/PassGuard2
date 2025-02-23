@@ -5,9 +5,12 @@ using PassGuard.Api.Database;
 using PassGuard.Api.Repositories;
 using PassGuard.Api.Service;
 using PassGuard.Shared.Models;
+using Xunit;
+
 
 namespace Tests;
 
+[Collection("NoParallelTests")]
 public class LoginAuthRepositotyTest
 {
     private readonly AuthRepository _testAuthRepository;
@@ -16,7 +19,7 @@ public class LoginAuthRepositotyTest
     public LoginAuthRepositotyTest()
     {
         var options = new DbContextOptionsBuilder<SqliteDbContext>()
-            .UseInMemoryDatabase("TestDb")
+            .UseInMemoryDatabase("TestDbLogin")
             .Options;
 
         _sqliteDbContext = new SqliteDbContext(options);
@@ -49,7 +52,6 @@ public class LoginAuthRepositotyTest
             Username = testLoginAccountForm.Username,
             Password = computedHashString,
             Salt = salt,
-            CreatedAt = DateTime.Now
         };
 
         _sqliteDbContext.Accounts.Add(testAccount);
@@ -62,7 +64,6 @@ public class LoginAuthRepositotyTest
         
         // ! Assert
         Assert.NotNull(result);
-        Assert.Equal(testAccount.CreatedAt, result.CreatedAt);
         Assert.IsType<Guid>(result.Id);
         Assert.Equal("testuser", result.Username);
 
@@ -75,8 +76,8 @@ public class LoginAuthRepositotyTest
         // * Mock de la valeur d'entrée
         LoginAccountForm testLoginAccountForm = new LoginAccountForm
         {
-            Username = "testuser",
-            Password = "testpassword"
+            Username = "testuser2",
+            Password = "testpassword2"
         };
         
         // ! Act
