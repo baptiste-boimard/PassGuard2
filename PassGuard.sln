@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Web.Client", "Pas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGuard.Shared", "PassGuard.Shared\PassGuard.Shared.csproj", "{C315A121-5988-4703-B478-2B4491C8FA5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{019E4F4A-58A7-4385-85A7-E60F1F543012}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{C315A121-5988-4703-B478-2B4491C8FA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C315A121-5988-4703-B478-2B4491C8FA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C315A121-5988-4703-B478-2B4491C8FA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019E4F4A-58A7-4385-85A7-E60F1F543012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019E4F4A-58A7-4385-85A7-E60F1F543012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019E4F4A-58A7-4385-85A7-E60F1F543012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019E4F4A-58A7-4385-85A7-E60F1F543012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

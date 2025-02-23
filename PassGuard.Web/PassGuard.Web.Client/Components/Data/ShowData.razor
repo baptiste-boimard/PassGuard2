@@ -177,7 +177,11 @@
     {
         await PasswordState.UpdatePasword(token, editingItem);
 
-        passwordVisibility[editingItem.Id] = false;
+        foreach (var key in  passwordVisibility.Keys.ToList())
+        {
+            passwordVisibility[key] = false;
+        }
+        
         editingItem = null;
         StateHasChanged();
     }
