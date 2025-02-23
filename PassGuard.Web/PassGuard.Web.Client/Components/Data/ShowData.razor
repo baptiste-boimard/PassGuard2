@@ -271,7 +271,7 @@
         
         if (result != null)
         {
-            var enteredPassword = result.Data!.ToString();
+            var enteredPassword = result.Data?.ToString();
             SubmitPassword(enteredPassword, id);
         }
     }
@@ -294,7 +294,7 @@
         {
             var decryptedPass = await response.Content.ReadAsStringAsync();
 
-            // J'ajoute la visibilité True pour mon id dans mon dict
+            //* J'ajoute la visibilité True pour mon id dans mon dict
             passwordVisibility[id] = true;
 
             // ToggleVisibilityAfterConfirmation(id);
